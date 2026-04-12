@@ -6,7 +6,7 @@ tex:
 
 # Generate .tex then compile to PDF
 pdf: tex
-	cd output && latexmk -xelatex -interaction=nonstopmode cv.tex
+	cd output && latexmk -xelatex -interaction=nonstopmode -g cv.tex
 
 # Clean build artifacts
 clean:
