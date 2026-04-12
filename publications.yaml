@@ -1,0 +1,75 @@
+- year: "2025"
+  title: "Illustrating Hyperbolic Surfaces with Mesh Embeddings"
+  coauthors: [fabi-lander, erik-loffelholtz, dia-taha, anna-wienhard]
+  venue: submitted, Bridges 2026
+
+- year: "2025"
+  title: "Classical Optics for Charged Black Holes"
+  venue: Bridges Math Art Proceedings
+  url: https://arxiv.org/abs/2505.04633
+
+- year: "2025"
+  title: "Elliptic Curves & The Hopf Fibration"
+  coauthors: [nadir-hajouji]
+  venue: forthcoming, Bridges Math Art Conference Proceedings
+  url: https://arxiv.org/abs/2505.09627
+
+- year: "2024"
+  title: "Degenerations of the Product Geometries in Projective Space that contain Nil"
+  coauthors: [tom-shifley]
+  venue: Topology and its Applications
+  url: https://www.sciencedirect.com/science/article/pii/S0166864124002633
+
+- year: "2023"
+  title: "Visualizing Knot Complements"
+  venue: MAA Focus Cover Article, Oct-Nov 2023
+  url: https://digitaleditions.walsworth.com/publication/?i=803817&article_id=4652761&view=articleBrowser
+
+- year: "2023"
+  title: "Modeling Graphs Beyond Hyperbolic: Graph Neural Networks in Symmetric Positive Definite Matrices"
+  coauthors: [wei-zhao, federico-lopez, max-riestenberg, michael-strube, dia-taha]
+  venue: European Congress of Machine Learning (ECML)
+  url: https://arxiv.org/abs/2306.14064
+
+- year: "2022"
+  title: "Raymarching Thurston Geometries"
+  coauthors: [remi-coulon, sabetta-matsumoto, henry-segerman]
+  venue: Experimental Mathematics
+  url: https://arxiv.org/abs/2010.15801
+  website: http://www.3-dimensional.space
+
+- year: "2021"
+  title: "Algebraic Number Starscapes"
+  coauthors: [edmund-harriss, kate-stange]
+  venue: Experimental Mathematics
+  url: https://arxiv.org/abs/2008.07655
+  website: https://algebraicstarscapes.com/
+
+- year: "2021"
+  title: "The Heisenberg Plane"
+  venue: Algebraic and Geometric Topology, 2023
+  url: https://arxiv.org/abs/1805.04256
+
+- year: "2021"
+  title: "Vector-valued Distance and Gyrocalculus on the Space of Symmetric Positive Definite Matrices"
+  coauthors: [federico-lopez, bea-pozzetti, michael-strube, anna-wienhard]
+  venue: NeurIPS (Neural Information Processing Systems)
+  url: https://arxiv.org/abs/2110.13475
+
+- year: "2020"
+  title: "Symmetric Spaces for Graph Embeddings: A Finsler-Riemannian Approach"
+  coauthors: [federico-lopez, bea-pozzetti, michael-strube, anna-wienhard]
+  venue: ICML (International Conference on Machine Learning)
+  url: https://arxiv.org/abs/2106.04941
+
+- year: "2020"
+  title: "Non-Euclidean Virtual Reality III: Nil"
+  coauthors: [remi-coulon, sabetta-matsumoto, henry-segerman]
+  venue: Bridges 2020 Conference Proceedings
+  url: https://arxiv.org/abs/2002.00369
+
+- year: "2020"
+  title: "Non-Euclidean Virtual Reality IV: Sol"
+  coauthors: [remi-coulon, sabetta-matsumoto, henry-segerman]
+  venue: Bridges 2020 Conference Proceedings
+  url: https://arxiv.org/abs/2002.00513

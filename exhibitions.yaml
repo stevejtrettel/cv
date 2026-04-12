@@ -1,0 +1,91 @@
+- year: "2025"
+  venue: National Museum of Mathematics
+  title: The Geometry of Spacetime
+  detail: '"Warped Realities" Exhibition, June--August'
+
+- year: "2025"
+  venue: National Museum of Mathematics
+  title: Geodesic Woodcuts
+  detail: '"Warped Realities" Exhibition, June--August'
+
+- year: "2025"
+  venue: Turtle Bay Exploration Park
+  title: Singularity
+  detail: "West Coast Biennial: Juried Exhibition, Redding CA, January--May"
+
+- year: "2025"
+  venue: South SF Library Art Gallery
+  title: Many Paths to the Beach
+  detail: "South SF, February in the show 'Finding a Path'"
+
+- year: "2025"
+  venue: Joint Math Meetings
+  title: Geodesic Woodcuts
+  detail: Seattle, WA
+  collaborators: [edmund-harriss]
+
+- year: "2025"
+  venue: Joint Math Meetings
+  title: Singularity
+  detail: Seattle, WA
+
+- year: "2024"
+  venue: "O'Hanlon Center for the Arts"
+  title: Julia
+  detail: "Selected for Juried show 'Chaos'"
+
+- year: "2024"
+  venue: "O'Hanlon Center for the Arts"
+  title: Many Paths to the Beach
+  detail: "Selected for 'Chaos'"
+
+- year: "2024"
+  venue: Queens College NY
+  title: Thurston Geometries
+  detail: Mathematical Art Exhibition
+  collaborators: [remi-coulon, sabetta-matsumoto, henry-segerman]
+
+- year: "2024"
+  venue: Epperson Gallery
+  title: Kleinian Creatures from the 4th Dimension
+  detail: "Selected for Juried Show 'Abstractions', October 2024"
+
+- year: "2024"
+  venue: ARC Gallery SF
+  title: Kleinian Creatures from the 4th Dimension
+  detail: "Accepted into second-tier of the Gallery show 'Fantasy': work displayed on screen in-gallery, June 2024"
+
+- year: "2024"
+  venue: Wignall Art Museum
+  title: 3.Dimensional.Space
+  detail: Large-Screen Video Installation
+  collaborators: [remi-coulon, henry-segerman, sabetta-matsumoto]
+
+- year: "2024"
+  venue: MAA Golden Section
+  title: Gyroid, and Connect Sum
+
+- year: "2024"
+  venue: Joint Mathematics Meeting
+  title: 4D Kleinian Limit Set
+
+- year: "2023"
+  venue: "CNRS La preuve par l'image Competition"
+  title: Bleu Hyperbolique
+  detail: First Prize Award
+
+- year: "2023"
+  venue: Joint Mathematics Meeting
+  title: Knots in the 3 Sphere
+
+- year: "2022"
+  venue: MAA Golden Section
+  title: The Geometry of Knot Complements
+
+- year: "2020"
+  venue: Iceland
+  title: Algebraic Starscapes
+
+- year: "2019"
+  venue: Joint Mathematics Meeting
+  title: Real Projective Triangles, and The Hopf Fibration

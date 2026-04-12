@@ -1,0 +1,55 @@
+openSource:
+  - years: "2019--Present"
+    title: Raymarcher for the Thurston Geometries
+    url: https://github.com/henryseg/non-euclidean_VR
+    description: "GPU accelerated calculation of the geodesic flow in homogeneous 3-manifolds and physically based shading to compute accurate 'inside views' of manifolds relevant to geometrization"
+
+  - years: "2020--Present"
+    title: JS System for Mathematical Illustration
+    url: https://github.com/stevejtrettel/World
+    description: "Collection of numerical integrators, 3D modeling tools, GPU accelerated computation systems for producing mathematical illustrations, both for research and for class"
+
+  - years: "2020--Present"
+    title: Path Tracer for Mathematical Illustration
+    url: https://github.com/stevejtrettel/PathTracer
+    description: "Physically Based Renderer for producing photo-realistic images of mathematical objects (algebraic varieties, limit sets of hyperbolic groups, etc)"
+
+  - years: "2021"
+    title: GPU-Accelerated Numerical PDEs
+    url: https://github.com/stevejtrettel/ComputeMaterial
+    description: "Framework for computing and visualizing the results of highly parallelizable numerics in real time (e.g. mean curvature flow on surfaces, 2D Schrodinger equation)"
+
+  - years: "2021"
+    title: GPU-Accelerated Parametric Surfaces
+    url: https://github.com/stevejtrettel/ShaderMaterial
+    description: "Framework for computing real-time visualizations of functions defined on parametric surfaces (e.g. surfaces colored by mean curvature, domain coloring on Riemann surfaces)"
+
+specificPrograms:
+  - type: Program
+    title: Geodesics and Spheres in Sol
+    for: Rich Schwartz
+
+  - type: Animation
+    title: Finding Lines on a Cubic
+    for: Benson Farb, Jesse Wolfson
+    url: https://vimeo.com/368051641
+
+  - type: Animation
+    title: Braid Monodromy
+    for: Benson Farb, Jesse Wolfson
+    url: https://vimeo.com/368067023
+
+  - type: Figures
+    title: Cubic Surfaces
+    for: Stephen McKean
+    url: https://vimeo.com/393580753
+    arxiv: https://arxiv.org/abs/2002.10367
+
+  - type: Animation
+    title: "Approaching \u2202(Teichm\xFCller Space)"
+    for: Katie Mann
+    url: https://www.shadertoy.com/view/sdGGDV
+
+  - type: Program
+    title: Phase of Complex Polynomials
+    for: Jon McCammond, Michael Dougherty
