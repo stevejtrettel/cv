@@ -1,0 +1,25 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevejtrettel/cv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/stevejtrettel/cv/issues"
+  },
+  "homepage": "https://github.com/stevejtrettel/cv#readme",
+  "dependencies": {
+    "js-yaml": "^4.1.1",
+    "nunjucks": "^3.2.4"
+  }
+}

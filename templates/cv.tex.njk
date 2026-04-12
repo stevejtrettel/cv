@@ -1,0 +1,197 @@
+\documentclass[11pt,letterpaper]{article}
+
+%% ── Encoding & Fonts ──────────────────────────────────────────
+\usepackage{fontspec}
+\setsansfont{Libertinus Sans}
+\setmainfont{Avenir Next}
+\renewcommand{\familydefault}{\sfdefault}
+\newfontfamily\sectionfont{Libertinus Sans}
+\newfontfamily\detailfont{Avenir Next}
+
+%% ── Layout ────────────────────────────────────────────────────
+\usepackage[total={6.5in, 9.3in}]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+%% ── Colors ────────────────────────────────────────────────────
+\usepackage{xcolor}
+\definecolor{mainColor}{rgb}{0.341,0.4588,0.3961}
+\definecolor{accentColor}{rgb}{0.9686,0.7098,0.0706}
+\definecolor{linkColor}{rgb}{0.2470,0.4235,0.7098}
+\definecolor{grayColor}{rgb}{0.4588,0.476,0.4824}
+
+%% ── Links ─────────────────────────────────────────────────────
+\usepackage[unicode]{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkColor,
+  linkcolor=linkColor,
+}
+
+%% ── Tabular ───────────────────────────────────────────────────
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+
+%% ── Page numbers ──────────────────────────────────────────────
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\fancyfoot[R]{\small\itshape\color{grayColor}\thepage/\pageref{LastPage}}
+
+%% ── Lengths ───────────────────────────────────────────────────
+\newlength{\hintscolwidth}
+\setlength{\hintscolwidth}{0.175\textwidth}
+\newlength{\sepcolwidth}
+\setlength{\sepcolwidth}{0.025\textwidth}
+\newlength{\maincolwidth}
+\setlength{\maincolwidth}{\textwidth-\hintscolwidth-\sepcolwidth}
+
+%% ── Custom commands ───────────────────────────────────────────
+
+% Section heading: gold bar on the left, title in Libertinus Sans
+\newlength{\baseletterht}
+\settoheight{\baseletterht}{{\sectionfont\LARGE o}}
+\addtolength{\baseletterht}{-0.95ex}
+\newcommand{\cvsection}[1]{%
+  \par\addvspace{2.5ex}%
+  \parbox[t]{\hintscolwidth}{\strut\raggedleft\raisebox{\baseletterht}{\color{accentColor}\rule{\hintscolwidth}{0.95ex}}}%
+  \hspace{\sepcolwidth}%
+  \parbox[t]{\maincolwidth}{\strut{\sectionfont\LARGE\color{mainColor}#1}}%
+  \par\nobreak\addvspace{1ex}%
+}
+
+% Subsection heading
+\newcommand{\cvsubsection}[1]{%
+  \par\addvspace{1ex}%
+  \parbox[t]{\hintscolwidth}{\strut}%
+  \hspace{\sepcolwidth}%
+  \parbox[t]{\maincolwidth}{\strut{\sectionfont\Large\color{mainColor}#1}}%
+  \par\nobreak\addvspace{0.5ex}%
+}
+
+% Single CV entry: \cvitem{year}{content}
+\newcommand{\cvitem}[3][0.25em]{%
+  \begin{tabular}{@{}p{\hintscolwidth}@{\hspace{\sepcolwidth}}p{\maincolwidth}@{}}%
+    \raggedleft\small #2 & #3%
+  \end{tabular}%
+  \par\addvspace{#1}%
+}
+
+%% ── Document ──────────────────────────────────────────────────
+\begin{document}
+
+%% ── Header ────────────────────────────────────────────────────
+\begin{minipage}[b]{0.6\textwidth}
+  {\sectionfont\fontsize{34pt}{40pt}\selectfont\bfseries\color{mainColor} STEVE\,\,TRETTEL}\\[0.6em]
+  {\color{grayColor}\slshape strettel@usfca.edu\quad \href{https://stevejtrettel.site}{stevejtrettel.site}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[b]{0.35\textwidth}
+  \raggedleft\small\color{grayColor}\itshape
+  Department of Math \& Statistics\\
+  University of San Francisco\\
+  \href{mailto:strettel@usfca.edu}{strettel@usfca.edu}\\
+  \href{https://stevejtrettel.site}{stevejtrettel.site}\\
+  github/stevejtrettel
+\end{minipage}
+
+\vspace{2.5em}
+
+%% ── Appointments ──────────────────────────────────────────────
+\cvsection{Appointments}
+<% for e in appointments %>
+\cvitem{<< e.years >>}{\textbf{<< e.institution >>}, \textit{<< e.role >>}.}
+<% endfor %>
+
+%% ── Institute Visits ──────────────────────────────────────────
+\cvsection{Institute Visits}
+<% for e in instituteVisits %>
+\cvitem{<< e.years >>}{\textbf{<< e.institution >>}, << e.location >>.<%- if e.detail %>\newline {\detailfont\small << e.detail >>}<% endif %>}
+<% endfor %>
+
+%% ── Education ─────────────────────────────────────────────────
+\cvsection{Education}
+<% for e in education %>
+\cvitem{<< e.years >>}{\textbf{<< e.institution >>}, \textit{<< e.degree >>}<%- if e.detail %>, << e.detail | replace("Advisor:", "Advisor:") >><% endif %>.}
+<% endfor %>
+
+%% ── Publications ──────────────────────────────────────────────
+\cvsection{Publications}
+<% for e in publications %>
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.coauthors %>, \textit{with << e.coauthors | join(", ") >>}<% endif %>.<%- if e.url %> Available at \href{<< e.url >>}{<< e.url | replace("https://", "") >>}.<% endif %>\newline << e.venue >>}
+<% endfor %>
+
+%% ── Art Exhibitions ───────────────────────────────────────────
+\cvsection{Art Exhibitions}
+<% for e in exhibitions %>
+\cvitem{<< e.year >>}{\textbf{<< e.venue >>}, \textit{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %><%- if e.detail %>. << e.detail >><% endif %>.}
+<% endfor %>
+
+%% ── Featured Work ─────────────────────────────────────────────
+\cvsection{Featured Work:}
+<% for e in featuredWork %>
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %><%- if e.detail %>. \textit{<< e.detail >>}<% endif %>.}
+<% endfor %>
+
+%% ── Teaching ──────────────────────────────────────────────────
+\cvsection{Teaching Experience}
+<% for uni in teaching %>
+\cvsubsection{<< uni.university >>}
+<% for c in uni.courses %>
+\cvitem{<< c.terms | default("") >>}{\textbf{<< c.name >>} (<< c.number >>), << c.level >>.}
+<% endfor %>
+<% endfor %>
+
+%% ── Colloquia ─────────────────────────────────────────────────
+\cvsection{Undergraduate Colloquia \& Related Talks}
+<% for e in colloquia %>
+\cvitem{<< e.year >>}{\textbf{<< e.institution >>}, << e.event >><%- if e.title %>, \textit{<< e.title >>}<% endif %>.}
+<% endfor %>
+
+%% ── Public Lectures ───────────────────────────────────────────
+\cvsection{Invited Public Lectures}
+<% for e in publicLectures %>
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.event %>, << e.event >><% endif %>.\newline {\detailfont\small << e.institution >><%- if e.location %>, << e.location >><% endif %>}}
+<% endfor %>
+
+%% ── Research Talks ────────────────────────────────────────────
+\cvsection{Select Invited Research Talks}
+<% for e in researchTalks %>
+\cvitem{<< e.year >>}{\textbf{<< e.institution >>}, << e.event >><%- if e.detail %>, << e.detail >><% endif %>.}
+<% endfor %>
+
+%% ── Service ───────────────────────────────────────────────────
+\cvsection{Service \& Outreach}
+<% for e in service %>
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.institution %>, << e.institution >><% endif %><%- if e.detail %>.\newline {\detailfont\small << e.detail >>}<% endif %>.}
+<% endfor %>
+
+%% ── Awards ────────────────────────────────────────────────────
+\cvsection{Fellowships \& Awards}
+<% for e in awards %>
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.institution %>, << e.institution >><% endif %><%- if e.detail %>.\newline {\detailfont\small << e.detail >>}<% endif %>.}
+<% endfor %>
+
+%% ── Software ──────────────────────────────────────────────────
+\cvsection{Mathematical Software}
+
+\cvsubsection{Open Source Projects}
+<% for e in software.openSource %>
+\cvitem{<< e.years >>}{\textbf{<< e.title >>}\newline {\detailfont\small << e.description >>}}
+<% endfor %>
+
+\cvsubsection{Selected Specific Programs}
+<% for e in software.specificPrograms %>
+\cvitem{<< e.type >>}{\textbf{<< e.title >>}, for << e.for >>.}
+<% endfor %>
+
+%% ── Languages ─────────────────────────────────────────────────
+\cvsection{Languages}
+<% for e in languages %>
+\cvitem{}{\textbf{<< e.language >>}, << e.level >>.}
+<% endfor %>
+
+\end{document}
