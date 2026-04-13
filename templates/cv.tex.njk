@@ -107,9 +107,9 @@
 <% endfor %>
 
 %% ── Institute Visits ──────────────────────────────────────────
-\cvsection{Institute Visits}
+\cvsection{Research Residencies}
 <% for e in instituteVisits %>
-\cvitem{<< e.years >>}{\textbf{<< e.institution >>}, << e.location >>.<%- if e.detail %>\newline {\detailfont\small << e.detail >>}<% endif %>}
+\cvitem{<< e.years >>}{\textbf{<< e.institution >>}, << e.location >>.}
 <% endfor %>
 
 %% ── Education ─────────────────────────────────────────────────
@@ -141,14 +141,18 @@
 <% for uni in teaching %>
 \cvsubsection{<< uni.university >>}
 <% for c in uni.courses %>
+<% if uni.university == "University of San Francisco" %>
 \cvitem{<< c.terms | default("") >>}{\textbf{<< c.name >>} (<< c.number >>), << c.level >>.}
+<% else %>
+\cvitem{}{\textbf{<< c.name >>} (<< c.number >>), << c.level >>.}
+<% endif %>
 <% endfor %>
 <% endfor %>
 
 %% ── Colloquia ─────────────────────────────────────────────────
 \cvsection{Undergraduate Colloquia \& Related Talks}
 <% for e in colloquia %>
-\cvitem{<< e.year >>}{\textbf{<< e.institution >>}, << e.event >><%- if e.title %>, \textit{<< e.title >>}<% endif %>.}
+\cvitem{<< e.year >>}{\textbf{<< e.institution >>}, << e.event >>.}
 <% endfor %>
 
 %% ── Public Lectures ───────────────────────────────────────────
@@ -178,12 +182,17 @@
 %% ── Software ──────────────────────────────────────────────────
 \cvsection{Mathematical Software}
 
-\cvsubsection{Open Source Projects}
-<% for e in software.openSource %>
-\cvitem{<< e.years >>}{\textbf{<< e.title >>}\newline {\detailfont\small << e.description >>}}
+\cvsubsection{Software Systems}
+<% for e in software.systems %>
+\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{<< e.url | replace("https://", "") >>}.<% endif %>\newline {\detailfont\small << e.description >>}}
 <% endfor %>
 
-\cvsubsection{Selected Specific Programs}
+\cvsubsection{Research Projects}
+<% for e in software.projects %>
+\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{<< e.url | replace("https://", "") >>}.<% endif %>\newline {\detailfont\small << e.description >>}}
+<% endfor %>
+
+\cvsubsection{Specific Programs}
 <% for e in software.specificPrograms %>
 \cvitem{<< e.type >>}{\textbf{<< e.title >>}, for << e.for >>.}
 <% endfor %>

@@ -86,6 +86,7 @@ let data = {
   instituteVisits: loadYaml('institute-visits.yaml'),
   education: loadYaml('education.yaml'),
   publications: loadYaml('publications.yaml'),
+  inProgress: loadYaml('in-progress.yaml'),
   exhibitions: loadYaml('exhibitions.yaml'),
   featuredWork: loadYaml('featured-work.yaml'),
   teaching: loadYaml('teaching.yaml'),

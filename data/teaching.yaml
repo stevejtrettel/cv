@@ -28,22 +28,22 @@
   courses:
     - name: Intro to Proof
       number: Math 56
-      level: Undergraduate Course
+      level: Intermediate Undergraduate
       terms: S 2022
 
     - name: Hyperbolic Geometry
       number: Math 142
-      level: Advanced Undergraduate Course
+      level: Advanced Undergraduate
       terms: F 2021
 
     - name: Functions of a Real Variable
       number: Math 115
-      level: Undergraduate Math Major Course
+      level: Intermediate Undergraduate
       terms: S & F 2020
 
     - name: Groups & Symmetry
       number: Math 109
-      level: Undergraduate Math Major Course
+      level: Intermediate Undergraduate
       terms: F 2020, 2021
 
     - name: Integral Calculus
@@ -60,5 +60,5 @@
   courses:
     - name: Integral Calculus
       number: Math 3B
-      level: Introductory Undergraduate Course
+      level: Introductory Undergraduate
       terms: "2016, 2017"

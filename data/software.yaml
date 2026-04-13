@@ -1,28 +1,48 @@
-openSource:
-  - years: "2019--Present"
-    title: Raymarcher for the Thurston Geometries
-    url: https://github.com/henryseg/non-euclidean_VR
-    description: "GPU accelerated calculation of the geodesic flow in homogeneous 3-manifolds and physically based shading to compute accurate 'inside views' of manifolds relevant to geometrization"
+systems:
+  - title: Three.js Demos
+    description: "A system for creating and running Three.js animations."
+    tech: JavaScript / Three.js
+    url: https://github.com/stevejtrettel/threejs-demos
 
-  - years: "2020--Present"
-    title: JS System for Mathematical Illustration
-    url: https://github.com/stevejtrettel/World
-    description: "Collection of numerical integrators, 3D modeling tools, GPU accelerated computation systems for producing mathematical illustrations, both for research and for class"
+  - title: Shader Sandbox
+    description: "An npm package for running Shadertoy-like shaders and beyond easily on your local machine."
+    tech: JavaScript / GLSL
+    url: https://github.com/stevejtrettel/shader-sandbox
 
-  - years: "2020--Present"
-    title: Path Tracer for Mathematical Illustration
+  - title: Path Tracer
+    description: "Photorealistic rendering of signed distance fields via unidirectional path tracing in GLSL."
+    tech: GLSL
     url: https://github.com/stevejtrettel/PathTracer
-    description: "Physically Based Renderer for producing photo-realistic images of mathematical objects (algebraic varieties, limit sets of hyperbolic groups, etc)"
 
-  - years: "2021"
-    title: GPU-Accelerated Numerical PDEs
-    url: https://github.com/stevejtrettel/ComputeMaterial
-    description: "Framework for computing and visualizing the results of highly parallelizable numerics in real time (e.g. mean curvature flow on surfaces, 2D Schrodinger equation)"
+  - title: Geometric Optimization
+    description: "Solving geometric embedding problems in various ambient spaces via optimization techniques."
+    tech: Python, Javascript
+    url: https://github.com/MPI-MiS-Mathematics-Lab/PyTorch-DDG
+    collaborators: [mpi-math-lab]
 
-  - years: "2021"
-    title: GPU-Accelerated Parametric Surfaces
-    url: https://github.com/stevejtrettel/ShaderMaterial
-    description: "Framework for computing real-time visualizations of functions defined on parametric surfaces (e.g. surfaces colored by mean curvature, domain coloring on Riemann surfaces)"
+projects:
+  - title: Cubic Lines
+    description: "Real time visualizations of cubic surfaces parameterized by six points in the projective plane."
+    tech: Javascript / GLSL
+    url: https://github.com/stevejtrettel/cubic-lines/
+    collaborators: [gabriel-dorfsman-hopkins, claudio-gomez-gonzales]
+
+  - title: Geodesic Boards
+    description: "Computing geodesics on surfaces z=f(x,y) and exporting for CNC cutting."
+    tech: Javascript
+    url: https://github.com/stevejtrettel/geodesic-boards
+    collaborators: [edmund-harriss]
+
+  - title: Surfaces of Revolution
+    description: "Visualizing surfaces of revolution embedded in the Thurston Geometries."
+    tech: Javascript / Three.js
+    url: https://github.com/FabianLander/SurfacesOfRevolution
+    collaborators: [fabi-lander]
+
+  - title: Constant Curvature Surfaces
+    description: "Surfaces of revolution of constant curvature, textured by regions of the sphere or hyperbolic plane."
+    url: https://github.com/stevejtrettel/spindle-earth
+    collaborators: [stepan-paul]
 
 specificPrograms:
   - type: Program

@@ -17,39 +17,39 @@
   institution: UC Santa Barbara Mathematics Department
   detail: "Annual departmental award recognizing a graduate student's teaching"
 
-- year: "2018"
-  title: Excellence in Teaching Nominee
-  institution: UC Academic Senate
-  detail: Nominations across all faculty and instructors directly by students to the Academic Senate
+# - year: "2018"
+#   title: Excellence in Teaching Nominee
+#   institution: UC Academic Senate
+#   detail: Nominations across all faculty and instructors directly by students to the Academic Senate
 
-- year: "2015--2016"
-  title: UC Regents Fellowship
-  detail: Fellowship from the UC Regents, awardees chosen from across all disciplines
+# - year: "2015--2016"
+#   title: UC Regents Fellowship
+#   detail: Fellowship from the UC Regents, awardees chosen from across all disciplines
 
-- year: "2013--2014"
-  title: UC Regents Fellowship
+# - year: "2013--2014"
+#   title: UC Regents Fellowship
 
-- year: "2013"
-  title: Excellence in Mathematics Award
-  institution: University of Minnesota, Twin Cities
-  detail: Annual award to the two top graduating seniors in the mathematics department
+# - year: "2013"
+#   title: Excellence in Mathematics Award
+#   institution: University of Minnesota, Twin Cities
+#   detail: Annual award to the two top graduating seniors in the mathematics department
 
-- year: "2008--2012"
-  title: University of Minnesota Gold Scholarship
-  institution: University of Minnesota, Twin Cities
-  detail: 4-year merit based tuition scholarship
+# - year: "2008--2012"
+#   title: University of Minnesota Gold Scholarship
+#   institution: University of Minnesota, Twin Cities
+#   detail: 4-year merit based tuition scholarship
 
-- year: "2008"
-  title: Intel Scholarship
-  institution: International Science and Engineering Fair (ISEF)
-  detail: 1st place award. Project in Engineering
+# - year: "2008"
+#   title: Intel Scholarship
+#   institution: International Science and Engineering Fair (ISEF)
+#   detail: 1st place award. Project in Engineering
 
-- year: "2008"
-  title: Department of Defense Scholarship
-  institution: National Science Fair (JSHS)
-  detail: 1st place award, Junior Science and Humanities Symposium, project in Mathematics
+# - year: "2008"
+#   title: Department of Defense Scholarship
+#   institution: National Science Fair (JSHS)
+#   detail: 1st place award, Junior Science and Humanities Symposium, project in Mathematics
 
-- year: "2006"
-  title: Department of Defense Scholarship
-  institution: National Science Fair (JSHS)
-  detail: 1st place award, Junior Science and Humanities Symposium, project in Physics
+# - year: "2006"
+#   title: Department of Defense Scholarship
+#   institution: National Science Fair (JSHS)
+#   detail: 1st place award, Junior Science and Humanities Symposium, project in Physics
