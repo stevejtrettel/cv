@@ -89,6 +89,7 @@ let data = {
   inProgress: loadYaml('in-progress.yaml'),
   exhibitions: loadYaml('exhibitions.yaml'),
   featuredWork: loadYaml('featured-work.yaml'),
+  courseNotes: loadYaml('course-notes.yaml'),
   teaching: loadYaml('teaching.yaml'),
   colloquia: loadYaml('colloquia.yaml'),
   publicLectures: loadYaml('public-lectures.yaml'),

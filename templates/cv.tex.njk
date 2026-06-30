@@ -32,6 +32,7 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{calc}
+\usepackage{ragged2e}
 
 %% ── Page numbers ──────────────────────────────────────────────
 \usepackage{fancyhdr}
@@ -74,7 +75,7 @@
 
 % Single CV entry: \cvitem{year}{content}
 \newcommand{\cvitem}[3][0.25em]{%
-  \begin{tabular}{@{}p{\hintscolwidth}@{\hspace{\sepcolwidth}}p{\maincolwidth}@{}}%
+  \begin{tabular}{@{}p{\hintscolwidth}@{\hspace{\sepcolwidth}}>{\RaggedRight\arraybackslash}p{\maincolwidth}@{}}%
     \raggedleft\small #2 & #3%
   \end{tabular}%
   \par\addvspace{#1}%
@@ -84,19 +85,8 @@
 \begin{document}
 
 %% ── Header ────────────────────────────────────────────────────
-\begin{minipage}[b]{0.6\textwidth}
-  {\sectionfont\fontsize{34pt}{40pt}\selectfont\bfseries\color{mainColor} STEVE\,\,TRETTEL}\\[0.6em]
-  {\color{grayColor}\slshape strettel@usfca.edu\quad \href{https://stevejtrettel.site}{stevejtrettel.site}}
-\end{minipage}%
-\hfill%
-\begin{minipage}[b]{0.35\textwidth}
-  \raggedleft\small\color{grayColor}\itshape
-  Department of Math \& Statistics\\
-  University of San Francisco\\
-  \href{mailto:strettel@usfca.edu}{strettel@usfca.edu}\\
-  \href{https://stevejtrettel.site}{stevejtrettel.site}\\
-  github/stevejtrettel
-\end{minipage}
+{\sectionfont\fontsize{34pt}{40pt}\selectfont\bfseries\color{mainColor} STEVE\,\,TRETTEL}\\[0.6em]
+{\color{grayColor}\slshape \href{mailto:strettel@usfca.edu}{strettel@usfca.edu}\quad \href{https://stevejtrettel.site}{stevejtrettel.site}\quad \href{https://github.com/stevejtrettel}{github.com/stevejtrettel}}
 
 \vspace{2.5em}
 
@@ -121,7 +111,13 @@
 %% ── Publications ──────────────────────────────────────────────
 \cvsection{Publications}
 <% for e in publications %>
-\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.coauthors %>, \textit{with << e.coauthors | join(", ") >>}<% endif %>.<%- if e.url %> Available at \href{<< e.url >>}{<< e.url | replace("https://", "") >>}.<% endif %>\newline << e.venue >>}
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.coauthors %>, \textit{with << e.coauthors | join(", ") >>}<% endif %>.<%- if e.url %> Published in \href{<< e.url >>}{<< e.venue >>}<%- if e.arxiv %> (\href{<< e.arxiv >>}{arXiv version})<% endif %>.<%- elif e.venue %> << e.venue >><%- if e.arxiv %> (\href{<< e.arxiv >>}{arXiv version})<% endif %>.<%- elif e.arxiv %> \href{<< e.arxiv >>}{arXiv preprint}.<% endif %>}
+<% endfor %>
+
+%% ── Preprints & Work in Progress ──────────────────────────────
+\cvsection{Preprints \& Work in Progress}
+<% for e in inProgress %>
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.coauthors and e.coauthors | length %>, \textit{with << e.coauthors | join(", ") >>}<% endif %>.<%- if e.url %> Available at \href{<< e.url >>}{<< e.url | replace("https://", "") >>}<%- if e.arxiv %> (\href{<< e.arxiv >>}{arXiv version})<% endif %>.<%- elif e.arxiv %> Available at \href{<< e.arxiv >>}{<< e.arxiv | replace("https://", "") >>}.<% endif %><%- if e.venue %>\newline << e.venue >><% endif %>}
 <% endfor %>
 
 %% ── Art Exhibitions ───────────────────────────────────────────
@@ -130,10 +126,34 @@
 \cvitem{<< e.year >>}{\textbf{<< e.venue >>}, \textit{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %><%- if e.detail %>. << e.detail >><% endif %>.}
 <% endfor %>
 
+%% ── Software ──────────────────────────────────────────────────
+\cvsection{Mathematical Software}
+
+\cvsubsection{Software Systems}
+<% for e in software.systems %>
+\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{<< e.url | replace("https://", "") >>}.<% endif %>\newline {\detailfont\small << e.description >>}}
+<% endfor %>
+
+\cvsubsection{Research Projects}
+<% for e in software.projects %>
+\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{<< e.url | replace("https://", "") >>}.<% endif %>\newline {\detailfont\small << e.description >>}}
+<% endfor %>
+
+\cvsubsection{Specific Programs}
+<% for e in software.specificPrograms %>
+\cvitem{<< e.type >>}{\textbf{<< e.title >>}, for << e.for >>.}
+<% endfor %>
+
 %% ── Featured Work ─────────────────────────────────────────────
 \cvsection{Featured Work:}
 <% for e in featuredWork %>
-\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %><%- if e.detail %>. \textit{<< e.detail >>}<% endif %>.}
+\cvitem{<< e.year >>}{\textbf{<%- if e.url %>\href{<< e.url >>}{<< e.title >>}<% else %><< e.title >><% endif %>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %><%- if e.detail %>. \textit{<< e.detail >>}<% endif %>.}
+<% endfor %>
+
+%% ── Course Notes ──────────────────────────────────────────────
+\cvsection{Course Notes}
+<% for e in courseNotes %>
+\cvitem{<< e.number | default("") >>}{\textbf{<< e.title >>}<%- if e.pages %> (<< e.pages >> pages)<% endif %><%- if e.url %>. \href{<< e.url >>}{<< e.url | replace("https://", "") >>}<% endif %><%- if e.detail %>.\newline {\detailfont\small << e.detail >>}<% else %>.<% endif %>}
 <% endfor %>
 
 %% ── Teaching ──────────────────────────────────────────────────
@@ -177,24 +197,6 @@
 \cvsection{Fellowships \& Awards}
 <% for e in awards %>
 \cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.institution %>, << e.institution >><% endif %><%- if e.detail %>.\newline {\detailfont\small << e.detail >>}<% endif %>.}
-<% endfor %>
-
-%% ── Software ──────────────────────────────────────────────────
-\cvsection{Mathematical Software}
-
-\cvsubsection{Software Systems}
-<% for e in software.systems %>
-\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{<< e.url | replace("https://", "") >>}.<% endif %>\newline {\detailfont\small << e.description >>}}
-<% endfor %>
-
-\cvsubsection{Research Projects}
-<% for e in software.projects %>
-\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{<< e.url | replace("https://", "") >>}.<% endif %>\newline {\detailfont\small << e.description >>}}
-<% endfor %>
-
-\cvsubsection{Specific Programs}
-<% for e in software.specificPrograms %>
-\cvitem{<< e.type >>}{\textbf{<< e.title >>}, for << e.for >>.}
 <% endfor %>
 
 %% ── Languages ─────────────────────────────────────────────────

@@ -1,0 +1,26 @@
+# Course notes with clickable links.
+# Each entry: title (required); number (USF course number, optional — omit for non-USF courses);
+#             pages, url, detail (optional 1-line) all optional.
+
+- title: Multivariable Calculus
+  number: Math 211
+  pages: 200
+  url: https://calc3.stevejtrettel.site/
+  detail: Supplementary notes & interactive demos for a 1-semester course in multivariable and vector calculus.
+
+- title: Modern Geometry
+  number: Math 380
+  pages: 510
+  url: https://geometry.stevejtrettel.site/
+  detail: First draft of a textbook providing a unique treatment of hyperbolic geometry as part of a continuous 1-parameter family including the sphere and Euclidean plane.
+
+- title: Real Analysis
+  number: Math 453
+  pages: 370
+  url: https://analysis.stevejtrettel.site/
+  detail: Second draft of a textbook for a 1-semester course in real analysis emphasizing historically important problems and an axiomatic approach to integration.
+
+- title: Shader Programming
+  pages: 130
+  url: https://shaders.stevejtrettel.site/
+  detail: Extensive course notes (including fully worked examples and homework) introducing GPU programming to mathematicians. Taught at CIRM Graduate Winter School.

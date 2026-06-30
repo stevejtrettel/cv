@@ -1,23 +1,23 @@
-- year: "2026"
-  title: "Riemannian Limits of the Product Geometries"
-  coauthors: []
-  venue: 
-  url: 
+# Preprints & work in progress. Only `year` and `title` are required.
+# Optional: coauthors, arxiv, url, venue (add once it's posted/published).
 
 - year: "2026"
-  title: "Surfaces of Revolution in 3 Dimensional Homogeneous Spaces"
+  title: "Certifying Arithmeticity for Two Degree-Six Symplectic Hypergeometric Monodromy Groups"
+  coauthors: [anna-wienhard, max-riestenberg, dia-taha]
+  arxiv: https://arxiv.org/abs/2605.25935
+
+- year: "2026"
+  title: "Discrete Isometric Embeddings into Riemannian Manifolds via Energy Minimization"
+  coauthors: [fabi-lander, dia-taha]
+
+- year: "2026"
+  title: "Surfaces of Revolution in Homogeneous 3-Manifolds"
   coauthors: [fabi-lander]
-  venue: 
-  url: 
 
 - year: "2026"
   title: "Visualizing Elliptic Curves over Finite Fields"
   coauthors: [nadir-hajouji]
-  venue: 
-  url: 
 
 # - year: "2026"
 #   title: "Linking Proofs of Brouwer, Borsuk-Ulam and Poincare"
 #   coauthors: [dan-margalit, tom-banchoff]
-#   venue: 
-#   url: 
