@@ -14,6 +14,22 @@ systems:
     tech: GLSL
     url: https://github.com/stevejtrettel/PathTracer
 
+  - title: Math Lib
+    description: "A TypeScript framework for differential geometry, topology, and algebra, with visualizations via Three.js."
+    tech: TypeScript / Three.js
+    url: https://github.com/stevejtrettel/math-lib
+
+  - title: Hyperbolic Polytopes
+    description: "Visualization software for convex polytopes in hyperbolic 2- and 3-space, built from vertices or bounding half-spaces and drawn through swappable coordinate models, with Coxeter groups, tilings, and Cayley graphs."
+    tech: TypeScript / Three.js
+    url: https://github.com/stevejtrettel/hyperbolic-polytopes/
+    collaborators: [gordon-kirby]
+
+  - title: Limit Sets
+    description: "Interactive viewers and offline high-resolution renderers for the limit sets of finitely-generated matrix groups acting on projective space, from hypergeometric monodromy and Anosov representations to Kleinian groups."
+    tech: TypeScript / Three.js
+    url: https://github.com/stevejtrettel/limit-sets/
+
   - title: Geometric Optimization
     description: "Solving geometric embedding problems in various ambient spaces via optimization techniques."
     tech: Python, Javascript
@@ -44,6 +60,24 @@ projects:
     url: https://github.com/stevejtrettel/spindle-earth
     collaborators: [stepan-paul]
 
+  - title: Low-Vertex Flat Tori
+    description: "Numerically discovering low complexity flat tori in 3 space, following Rich Schwartz's vertex-minimal construction."
+    tech: TypeScript / Three.js
+    url: https://github.com/FabianLander/low-vertex-flat-tori
+    collaborators: [fabi-lander]
+
+  - title: Variety Point Clouds
+    description: "Sampling algebraic varieties in real and complex projective space as point clouds."
+    tech: TypeScript / Three.js
+    url: https://github.com/FabianLander/variety-point-clouds
+    collaborators: [fabi-lander]
+
+  - title: Woven Surfaces
+    description: "Computing periodic woven designs on surfaces."
+    tech: JavaScript
+    url: https://github.com/erik2810/knitted-models
+    collaborators: [mpi-math-lab]
+
 specificPrograms:
   - type: Program
     title: Geodesics and Spheres in Sol
@@ -66,7 +100,7 @@ specificPrograms:
     arxiv: https://arxiv.org/abs/2002.10367
 
   - type: Animation
-    title: "Approaching \u2202(Teichm\xFCller Space)"
+    title: "Approaching ∂(Teichm\xFCller Space)"
     for: Katie Mann
     url: https://www.shadertoy.com/view/sdGGDV
 

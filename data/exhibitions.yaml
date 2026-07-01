@@ -1,111 +1,144 @@
-
+# Art exhibitions.
+#   venue     - display name of the venue
+#   title     - title of the work shown
+#   venueUrl  - official venue site (or the show's own page); makes the venue name a link
+#   url       - my own page for this show (photos/explanations); makes the title a link
+#   juror     - juror name for juried shows; renders as "Juror: ..."
+#   detail, collaborators - optional
 
 - year: "2026"
   venue: International Congress of Mathematics
   title: Elliptic Curves
   detail: "Art Exhibition at the Fields Medal Ceremony, Philadelphia PA. August (to appear)"
-
+  venueUrl: https://www.icm2026.org
 
 - year: "2026"
   venue: International Congress of Mathematics
-  title: Warped Realities 
+  title: Warped Realities
   detail: "Art Exhibition at the Fields Medal Ceremony, Philadelphia PA. August (to appear)"
-
+  venueUrl: https://www.icm2026.org
 
 - year: "2026"
   venue: Maison Poincare
   title: 27 Lines on a Cubic Surface
   detail: "Mathematical Art Exhibiton, Paris France April-June"
-
+  venueUrl: https://www.ihp.fr/fr/musee-maison-poincare
 
 - year: "2025"
   venue: National Museum of Mathematics
   title: The Geometry of Spacetime
   detail: '"Warped Realities" Exhibition, June--August'
+  venueUrl: https://momath.org/
+  url: https://stevejtrettel.site/exhibitions/geometry-of-spacetime
 
 - year: "2025"
   venue: National Museum of Mathematics
   title: Geodesic Woodcuts
   detail: '"Warped Realities" Exhibition, June--August'
+  venueUrl: https://momath.org/
 
 - year: "2025"
   venue: Turtle Bay Exploration Park
   title: Singularity
   detail: "West Coast Biennial: Juried Exhibition, Redding CA, January--May"
+  venueUrl: https://www.turtlebay.org/
+  juror: Robyn G. Peterson
 
 - year: "2025"
-  venue: South SF Library Art Gallery
+  venue: South SF Cultural Arts Center
   title: Many Paths to the Beach
   detail: "South SF, February in the show 'Finding a Path'"
+  venueUrl: https://www.ssfca.gov/culturalarts
 
 - year: "2025"
   venue: Joint Math Meetings
   title: Geodesic Woodcuts
   detail: Seattle, WA
   collaborators: [edmund-harriss]
+  venueUrl: https://jointmathematicsmeetings.org/jmm
 
 - year: "2025"
   venue: Joint Math Meetings
   title: Singularity
   detail: Seattle, WA
+  venueUrl: https://jointmathematicsmeetings.org/jmm
 
 - year: "2024"
   venue: "O'Hanlon Center for the Arts"
   title: Julia
   detail: "Selected for Juried show 'Chaos'"
+  venueUrl: https://www.ohanloncenter.org/2024/10/chaos/
+  juror: Chester Arnold
 
 - year: "2024"
   venue: "O'Hanlon Center for the Arts"
   title: Many Paths to the Beach
   detail: "Selected for 'Chaos'"
+  venueUrl: https://www.ohanloncenter.org/2024/10/chaos/
+  juror: Chester Arnold
 
 - year: "2024"
   venue: Queens College NY
   title: Thurston Geometries
   detail: Mathematical Art Exhibition
   collaborators: [remi-coulon, sabetta-matsumoto, henry-segerman]
+  venueUrl: https://www.qc.cuny.edu/
 
 - year: "2024"
   venue: Epperson Gallery
   title: Kleinian Creatures from the 4th Dimension
-  detail: "Selected for Juried Show 'Abstractions', October 2024"
+  detail: "Selected for Juried Show 'Abstract Dimensions', October 2024"
+  venueUrl: https://eppersongallery.com/event-works.php?eventId=26873&event=Abstract+Dimensions
+  juror: Diane Williams
 
 - year: "2024"
   venue: ARC Gallery SF
   title: Kleinian Creatures from the 4th Dimension
   detail: "Accepted into second-tier of the Gallery show 'Fantasy': work displayed on screen in-gallery, June 2024"
+  venueUrl: https://www.arc-sf.com/fantasy-2024.html
+  juror: Philip Bewley
 
 - year: "2024"
   venue: Wignall Art Museum
   title: 3.Dimensional.Space
   detail: Large-Screen Video Installation
   collaborators: [remi-coulon, henry-segerman, sabetta-matsumoto]
+  venueUrl: https://www.chaffey.edu/wignall/
 
 - year: "2024"
   venue: MAA Golden Section
   title: Gyroid, and Connect Sum
+  venueUrl: https://www.golden.maa.org/
 
 - year: "2024"
   venue: Joint Mathematics Meeting
   title: 4D Kleinian Limit Set
+  venueUrl: https://jointmathematicsmeetings.org/jmm
 
 - year: "2023"
   venue: "CNRS La preuve par l'image Competition"
   title: Bleu Hyperbolique
   detail: First Prize Award
+  venueUrl: https://www.concours-preuve-image.fr/
 
 - year: "2023"
   venue: Joint Mathematics Meeting
   title: Knots in the 3 Sphere
+  venueUrl: https://jointmathematicsmeetings.org/jmm
 
 - year: "2022"
   venue: MAA Golden Section
   title: The Geometry of Knot Complements
+  venueUrl: https://www.golden.maa.org/
 
 - year: "2020"
-  venue: Iceland
+  venue: Gaukurinn, Reykjavik
   title: Algebraic Starscapes
+  detail: "Exhibition of Algebraic Starscapes prints at Gaukurinn, a cultural centre in Reykjavik, Iceland"
+  collaborators: [edmund-harriss, kate-stange]
+  venueUrl: https://gaukurinn.is/
 
 - year: "2019"
   venue: Joint Mathematics Meeting
   title: Real Projective Triangles, and The Hopf Fibration
+  venueUrl: https://jointmathematicsmeetings.org/jmm

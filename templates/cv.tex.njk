@@ -64,12 +64,19 @@
   \par\nobreak\addvspace{1ex}%
 }
 
+% Group heading: large gray text spanning the page, no bar or rule
+\newcommand{\cvgroup}[1]{%
+  \par\addvspace{3.5ex}%
+  {\sectionfont\fontsize{20pt}{24pt}\selectfont\bfseries\color{grayColor}#1}%
+  \par\nobreak\addvspace{0.5ex}%
+}
+
 % Subsection heading
 \newcommand{\cvsubsection}[1]{%
   \par\addvspace{1ex}%
   \parbox[t]{\hintscolwidth}{\strut}%
   \hspace{\sepcolwidth}%
-  \parbox[t]{\maincolwidth}{\strut{\sectionfont\Large\color{mainColor}#1}}%
+  \parbox[t]{\maincolwidth}{\strut{\sectionfont\Large\bfseries\color{grayColor}#1}}%
   \par\nobreak\addvspace{0.5ex}%
 }
 
@@ -85,7 +92,7 @@
 \begin{document}
 
 %% ── Header ────────────────────────────────────────────────────
-{\sectionfont\fontsize{34pt}{40pt}\selectfont\bfseries\color{mainColor} STEVE\,\,TRETTEL}\\[0.6em]
+{\sectionfont\fontsize{36pt}{42pt}\selectfont\bfseries\color{mainColor} STEVE\,\,TRETTEL}\\[0.6em]
 {\color{grayColor}\slshape \href{mailto:strettel@usfca.edu}{strettel@usfca.edu}\quad \href{https://stevejtrettel.site}{stevejtrettel.site}\quad \href{https://github.com/stevejtrettel}{github.com/stevejtrettel}}
 
 \vspace{2.5em}
@@ -108,6 +115,9 @@
 \cvitem{<< e.years >>}{\textbf{<< e.institution >>}, \textit{<< e.degree >>}<%- if e.detail %>, << e.detail | replace("Advisor:", "Advisor:") >><% endif %>.}
 <% endfor %>
 
+%% ── Research & Creative Work group ────────────────────────────
+\cvgroup{Research \& Creative Work}
+
 %% ── Publications ──────────────────────────────────────────────
 \cvsection{Publications}
 <% for e in publications %>
@@ -123,7 +133,7 @@
 %% ── Art Exhibitions ───────────────────────────────────────────
 \cvsection{Art Exhibitions}
 <% for e in exhibitions %>
-\cvitem{<< e.year >>}{\textbf{<< e.venue >>}, \textit{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %><%- if e.detail %>. << e.detail >><% endif %>.}
+\cvitem{<< e.year >>}{\textbf{<< e.venue >>}, \textit{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %><%- if e.detail %>. << e.detail >><% endif %><%- if e.juror %>. Juror: << e.juror >><% endif %>.<%- if e.url %> {\detailfont\small\href{<< e.url >>}{exhibition details}}<% endif %>}
 <% endfor %>
 
 %% ── Software ──────────────────────────────────────────────────
@@ -139,16 +149,16 @@
 \cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{<< e.url | replace("https://", "") >>}.<% endif %>\newline {\detailfont\small << e.description >>}}
 <% endfor %>
 
-\cvsubsection{Specific Programs}
-<% for e in software.specificPrograms %>
-\cvitem{<< e.type >>}{\textbf{<< e.title >>}, for << e.for >>.}
-<% endfor %>
+<# Specific Programs section hidden — data retained in software.yaml, not displayed #>
 
 %% ── Featured Work ─────────────────────────────────────────────
 \cvsection{Featured Work:}
 <% for e in featuredWork %>
-\cvitem{<< e.year >>}{\textbf{<%- if e.url %>\href{<< e.url >>}{<< e.title >>}<% else %><< e.title >><% endif %>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %><%- if e.detail %>. \textit{<< e.detail >>}<% endif %>.}
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %><%- if e.detail %>. \textit{<< e.detail >>}<% endif %><%- if e.venue %>. Published in <% if e.url %>\href{<< e.url >>}{<< e.venue >>}<% else %><< e.venue >><% endif %><% endif %>.}
 <% endfor %>
+
+%% ── Teaching group ────────────────────────────────────────────
+\cvgroup{Teaching}
 
 %% ── Course Notes ──────────────────────────────────────────────
 \cvsection{Course Notes}
@@ -169,6 +179,9 @@
 <% endfor %>
 <% endfor %>
 
+%% ── Talks group ───────────────────────────────────────────────
+\cvgroup{Talks}
+
 %% ── Colloquia ─────────────────────────────────────────────────
 \cvsection{Undergraduate Colloquia \& Related Talks}
 <% for e in colloquia %>
@@ -186,6 +199,9 @@
 <% for e in researchTalks %>
 \cvitem{<< e.year >>}{\textbf{<< e.institution >>}, << e.event >><%- if e.detail %>, << e.detail >><% endif %>.}
 <% endfor %>
+
+%% ── Service group ─────────────────────────────────────────────
+\cvgroup{Service}
 
 %% ── Service ───────────────────────────────────────────────────
 \cvsection{Service \& Outreach}

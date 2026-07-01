@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:eppersongallery.com)",
+      "WebFetch(domain:www.insmi.cnrs.fr)",
+      "WebFetch(domain:www.turtlebay.org)",
+      "WebFetch(domain:library.ssf.net)",
+      "Bash(node build.mjs)"
+    ]
+  }
+}

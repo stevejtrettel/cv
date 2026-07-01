@@ -1,24 +1,34 @@
+# Featured work: appearances/features of my work in publications, books, media.
+#   title  - the work or article title (bold, plain)
+#   venue  - publication/venue name; rendered as "Published in <venue>", linked via `url`
+#   url    - link for the venue (the published version / venue page)
+#   detail, collaborators - optional
+
 - year: "2024"
-  title: 'AMS "Happenings in the Mathematical Sciences 2024"'
+  title: "What's Happening in the Mathematical Sciences, Vol. 13"
+  venue: AMS Books
+  url: https://bookstore.ams.org/HAPPENING/13
   detail: "Main, or 'Cover Chapter' of this year's book features prominently our work"
   collaborators: [remi-coulon, sabetta-matsumoto, henry-segerman]
-  url: https://bookstore.ams.org/HAPPENING/13
 
 - year: "2024"
-  title: 'Notices of the AMS "Mathematical Illustration as a Research Technique"'
+  title: On the Importance of Illustration for Mathematical Research
+  venue: Notices of the AMS
+  url: https://www.ams.org/journals/notices/202401/noti2839/noti2839.html
   detail: "Article surveys recent work in Mathematical Illustration, features three of my research projects"
-  url: https://www.ams.org/journals/notices/202401/noti2839/noti2839.html
 
 - year: "2024"
-  title: Notices of the AMS Cover Art
-  detail: January 2024 Edition full cover illustration from Nil Geometry
-  collaborators: [henry-segerman, remi-coulon, sabetta-matsumoto]
+  title: Cover Art
+  venue: Notices of the AMS
   url: https://www.ams.org/journals/notices/202401/noti2839/noti2839.html
+  detail: "January 2024 edition, full cover illustration from Nil Geometry"
+  collaborators: [henry-segerman, remi-coulon, sabetta-matsumoto]
 
 - year: "2023"
-  title: MAA Focus Cover Art
-  detail: "Oct/Nov 2023 Edition full cover illustration from my work on Knot Complements"
+  title: Cover Art
+  venue: MAA Focus
   url: https://digitaleditions.walsworth.com/publication/?i=803817&view=contentsBrowser
+  detail: "Full cover illustration from my work on Knot Complements"
 
 - year: "2023"
   title: Burning Man
@@ -26,11 +36,13 @@
   collaborators: [henry-segerman, remi-coulon, sabetta-matsumoto]
 
 - year: "2021"
-  title: 'Notices of the AMS, "Spectral Geometry in the Presence of Symmetry"'
-  detail: "Invited to do all illustrations for this survey article by Craig Sutton"
+  title: Spectral Geometry in the Presence of Symmetry
+  venue: Notices of the AMS
   url: https://www.ams.org/journals/notices/202106/noti2294/noti2294.html
+  detail: "Invited to do all illustrations for this survey article by Craig Sutton"
 
 - year: "2020"
-  title: 'AMS Book "Illustrating Mathematics"'
-  detail: "Feature on my work with Projective Tilings in Laser Cut Wood"
+  title: Illustrating Mathematics
+  venue: AMS Books
   url: https://bookstore.ams.org/mbk-135
+  detail: "Feature on my work with Projective Tilings in Laser Cut Wood"
