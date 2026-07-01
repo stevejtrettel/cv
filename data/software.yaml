@@ -5,69 +5,69 @@ systems:
     url: https://github.com/stevejtrettel/threejs-demos
 
   - title: Shader Sandbox
-    description: "An npm package for running Shadertoy-like shaders and beyond easily on your local machine."
+    description: "An npm package for running Shadertoy-style shaders locally."
     tech: JavaScript / GLSL
     url: https://github.com/stevejtrettel/shader-sandbox
 
   - title: Path Tracer
-    description: "Photorealistic rendering of signed distance fields via unidirectional path tracing in GLSL."
+    description: "Photorealistic path tracing of signed distance fields in GLSL."
     tech: GLSL
     url: https://github.com/stevejtrettel/PathTracer
 
   - title: Math Lib
-    description: "A TypeScript framework for differential geometry, topology, and algebra, with visualizations via Three.js."
+    description: "A TypeScript framework for geometry, topology, and algebra."
     tech: TypeScript / Three.js
     url: https://github.com/stevejtrettel/math-lib
 
   - title: Hyperbolic Polytopes
-    description: "Visualization software for convex polytopes in hyperbolic 2- and 3-space, built from vertices or bounding half-spaces and drawn through swappable coordinate models, with Coxeter groups, tilings, and Cayley graphs."
+    description: "Convex polytopes, Coxeter groups, and tilings in hyperbolic space."
     tech: TypeScript / Three.js
     url: https://github.com/stevejtrettel/hyperbolic-polytopes/
     collaborators: [gordon-kirby]
 
   - title: Limit Sets
-    description: "Interactive viewers and offline high-resolution renderers for the limit sets of finitely-generated matrix groups acting on projective space, from hypergeometric monodromy and Anosov representations to Kleinian groups."
+    description: "Limit sets of finitely-generated groups on projective space."
     tech: TypeScript / Three.js
     url: https://github.com/stevejtrettel/limit-sets/
 
   - title: Geometric Optimization
-    description: "Solving geometric embedding problems in various ambient spaces via optimization techniques."
+    description: "Solving geometric embedding problems via optimization."
     tech: Python, Javascript
     url: https://github.com/MPI-MiS-Mathematics-Lab/PyTorch-DDG
     collaborators: [mpi-math-lab]
 
 projects:
   - title: Cubic Lines
-    description: "Real time visualizations of cubic surfaces parameterized by six points in the projective plane."
+    description: "Real-time cubic surfaces from six points in the projective plane."
     tech: Javascript / GLSL
     url: https://github.com/stevejtrettel/cubic-lines/
     collaborators: [gabriel-dorfsman-hopkins, claudio-gomez-gonzales]
 
   - title: Geodesic Boards
-    description: "Computing geodesics on surfaces z=f(x,y) and exporting for CNC cutting."
+    description: "Computing geodesics on surfaces z=f(x,y) for CNC cutting."
     tech: Javascript
     url: https://github.com/stevejtrettel/geodesic-boards
     collaborators: [edmund-harriss]
 
   - title: Surfaces of Revolution
-    description: "Visualizing surfaces of revolution embedded in the Thurston Geometries."
+    description: "Surfaces of revolution embedded in the Thurston geometries."
     tech: Javascript / Three.js
     url: https://github.com/FabianLander/SurfacesOfRevolution
     collaborators: [fabi-lander]
 
   - title: Constant Curvature Surfaces
-    description: "Surfaces of revolution of constant curvature, textured by regions of the sphere or hyperbolic plane."
+    description: "Constant-curvature surfaces, textured by sphere or hyperbolic plane."
     url: https://github.com/stevejtrettel/spindle-earth
     collaborators: [stepan-paul]
 
   - title: Low-Vertex Flat Tori
-    description: "Numerically discovering low complexity flat tori in 3 space, following Rich Schwartz's vertex-minimal construction."
+    description: "Numerically discovering low-complexity flat tori in 3-space."
     tech: TypeScript / Three.js
     url: https://github.com/FabianLander/low-vertex-flat-tori
     collaborators: [fabi-lander]
 
   - title: Variety Point Clouds
-    description: "Sampling algebraic varieties in real and complex projective space as point clouds."
+    description: "Sampling algebraic varieties in projective space as point clouds."
     tech: TypeScript / Three.js
     url: https://github.com/FabianLander/variety-point-clouds
     collaborators: [fabi-lander]

@@ -11,31 +11,35 @@
   title: Elliptic Curves
   detail: "Art Exhibition at the Fields Medal Ceremony, Philadelphia PA. August (to appear)"
   venueUrl: https://www.icm2026.org
+  url: https://stevejtrettel.site/exhibitions/icm-elliptic-curves-2026/
 
 - year: "2026"
   venue: International Congress of Mathematics
   title: Warped Realities
   detail: "Art Exhibition at the Fields Medal Ceremony, Philadelphia PA. August (to appear)"
   venueUrl: https://www.icm2026.org
+  url: https://stevejtrettel.site/exhibitions/icm-warped-realities-2026/
 
 - year: "2026"
   venue: Maison Poincare
   title: 27 Lines on a Cubic Surface
   detail: "Mathematical Art Exhibiton, Paris France April-June"
   venueUrl: https://www.ihp.fr/fr/musee-maison-poincare
+  url: https://stevejtrettel.site/exhibitions/maison-poincare-2026/
 
 - year: "2025"
   venue: National Museum of Mathematics
   title: The Geometry of Spacetime
   detail: '"Warped Realities" Exhibition, June--August'
   venueUrl: https://momath.org/
-  url: https://stevejtrettel.site/exhibitions/geometry-of-spacetime
+  url: https://stevejtrettel.site/exhibitions/momath-warped-realities-2025/
 
 - year: "2025"
   venue: National Museum of Mathematics
   title: Geodesic Woodcuts
   detail: '"Warped Realities" Exhibition, June--August'
   venueUrl: https://momath.org/
+  url: https://stevejtrettel.site/exhibitions/momath-warped-realities-2025/
 
 - year: "2025"
   venue: Turtle Bay Exploration Park
@@ -43,12 +47,14 @@
   detail: "West Coast Biennial: Juried Exhibition, Redding CA, January--May"
   venueUrl: https://www.turtlebay.org/
   juror: Robyn G. Peterson
+  url: https://stevejtrettel.site/exhibitions/west-coast-biennial-2025/
 
 - year: "2025"
   venue: South SF Cultural Arts Center
   title: Many Paths to the Beach
   detail: "South SF, February in the show 'Finding a Path'"
   venueUrl: https://www.ssfca.gov/culturalarts
+  url: https://stevejtrettel.site/exhibitions/finding-a-path-2025/
 
 - year: "2025"
   venue: Joint Math Meetings
@@ -56,12 +62,14 @@
   detail: Seattle, WA
   collaborators: [edmund-harriss]
   venueUrl: https://jointmathematicsmeetings.org/jmm
+  url: https://stevejtrettel.site/exhibitions/jmm-2025/
 
 - year: "2025"
   venue: Joint Math Meetings
   title: Singularity
   detail: Seattle, WA
   venueUrl: https://jointmathematicsmeetings.org/jmm
+  url: https://stevejtrettel.site/exhibitions/jmm-2025/
 
 - year: "2024"
   venue: "O'Hanlon Center for the Arts"
@@ -69,6 +77,7 @@
   detail: "Selected for Juried show 'Chaos'"
   venueUrl: https://www.ohanloncenter.org/2024/10/chaos/
   juror: Chester Arnold
+  url: https://stevejtrettel.site/exhibitions/ohanlon-chaos-2024/
 
 - year: "2024"
   venue: "O'Hanlon Center for the Arts"
@@ -76,6 +85,7 @@
   detail: "Selected for 'Chaos'"
   venueUrl: https://www.ohanloncenter.org/2024/10/chaos/
   juror: Chester Arnold
+  url: https://stevejtrettel.site/exhibitions/ohanlon-chaos-2024/
 
 - year: "2024"
   venue: Queens College NY
@@ -83,6 +93,7 @@
   detail: Mathematical Art Exhibition
   collaborators: [remi-coulon, sabetta-matsumoto, henry-segerman]
   venueUrl: https://www.qc.cuny.edu/
+  url: https://stevejtrettel.site/exhibitions/queens-college-2024/
 
 - year: "2024"
   venue: Epperson Gallery
@@ -90,6 +101,7 @@
   detail: "Selected for Juried Show 'Abstract Dimensions', October 2024"
   venueUrl: https://eppersongallery.com/event-works.php?eventId=26873&event=Abstract+Dimensions
   juror: Diane Williams
+  url: https://stevejtrettel.site/exhibitions/epperson-abstractions-2024/
 
 - year: "2024"
   venue: ARC Gallery SF
@@ -97,6 +109,7 @@
   detail: "Accepted into second-tier of the Gallery show 'Fantasy': work displayed on screen in-gallery, June 2024"
   venueUrl: https://www.arc-sf.com/fantasy-2024.html
   juror: Philip Bewley
+  url: https://stevejtrettel.site/exhibitions/arc-fantasy-2024/
 
 - year: "2024"
   venue: Wignall Art Museum
@@ -104,6 +117,7 @@
   detail: Large-Screen Video Installation
   collaborators: [remi-coulon, henry-segerman, sabetta-matsumoto]
   venueUrl: https://www.chaffey.edu/wignall/
+  url: https://stevejtrettel.site/exhibitions/wignall-3d-space-2024/
 
 - year: "2024"
   venue: MAA Golden Section
@@ -114,17 +128,20 @@
   venue: Joint Mathematics Meeting
   title: 4D Kleinian Limit Set
   venueUrl: https://jointmathematicsmeetings.org/jmm
+  url: https://stevejtrettel.site/exhibitions/jmm-2024/
 
 - year: "2023"
   venue: "CNRS La preuve par l'image Competition"
   title: Bleu Hyperbolique
   detail: First Prize Award
   venueUrl: https://www.concours-preuve-image.fr/
+  url: https://stevejtrettel.site/exhibitions/cnrs-preuve-par-limage-2023/
 
 - year: "2023"
   venue: Joint Mathematics Meeting
   title: Knots in the 3 Sphere
   venueUrl: https://jointmathematicsmeetings.org/jmm
+  url: https://stevejtrettel.site/exhibitions/jmm-2023/
 
 - year: "2022"
   venue: MAA Golden Section
@@ -137,8 +154,10 @@
   detail: "Exhibition of Algebraic Starscapes prints at Gaukurinn, a cultural centre in Reykjavik, Iceland"
   collaborators: [edmund-harriss, kate-stange]
   venueUrl: https://gaukurinn.is/
+  url: https://stevejtrettel.site/exhibitions/iceland-2020/
 
 - year: "2019"
   venue: Joint Mathematics Meeting
   title: Real Projective Triangles, and The Hopf Fibration
   venueUrl: https://jointmathematicsmeetings.org/jmm
+  url: https://stevejtrettel.site/exhibitions/jmm-2019/
