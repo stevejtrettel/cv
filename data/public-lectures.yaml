@@ -1,3 +1,9 @@
+- year: Summer 2026
+  institution: MAA MathFest
+  location: Boston, MA
+  event: "Invited Address (forthcoming)"
+  title: The Mathematics of Beautiful Graphics
+
 - year: Spring 2025
   institution: UCI Geometry Day
   location: Irvine, CA
@@ -17,11 +23,13 @@
   institution: "Notre Dame: Math is For Everyone"
   event: Annual Lecture
   title: From Geometry to Machine Learning
+  url: https://www.youtube.com/watch?v=x92NNDjJaN0
 
 - year: Fall 2023
   institution: Wonderfest
   location: Castro Valley, CA
   title: Seeing Space(time)
+  url: https://www.youtube.com/watch?v=LdiamKUXt04
 
 - year: Fall 2023
   institution: SF Public Library
@@ -30,8 +38,9 @@
 
 - year: Summer 2023
   institution: Heidelberg Institute for Theoretical Studies
-  location: Heidelberg, Germany
-  title: "From Geometry to Machine Learning (In honor of Prof. Dr. Anna Wienhard)"
+  location: Germany
+  title: "From Geometry to Machine Learning (In honor of Anna Wienhard)"
+  url: https://www.youtube.com/watch?v=o-1f2vJy52k
 
 - year: Spring 2023
   institution: Wonderfest
@@ -57,6 +66,7 @@
   institution: National Museum of Mathematics
   location: New York, NY (Virtual)
   title: "Life in Curved Space: From Magnifying Glasses to General Relativity"
+  url: https://www.youtube.com/watch?v=HgAGh4DmCRM
 
 - year: Winter 2021
   institution: "Gathering for Gardner: Celebration of Mind"

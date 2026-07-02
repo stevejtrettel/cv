@@ -141,12 +141,12 @@
 
 \cvsubsection{Software Systems}
 <% for e in software.systems %>
-\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{<< e.url | replace("https://", "") >>}.<% endif %>\newline {\detailfont\small << e.description >>}}
+\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{See Code on GitHub}.<% endif %>\newline {\detailfont\small << e.description >>}}
 <% endfor %>
 
 \cvsubsection{Research Projects}
 <% for e in software.projects %>
-\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{<< e.url | replace("https://", "") >>}.<% endif %>\newline {\detailfont\small << e.description >>}}
+\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{See Code on GitHub}.<% endif %>\newline {\detailfont\small << e.description >>}}
 <% endfor %>
 
 <# Specific Programs section hidden — data retained in software.yaml, not displayed #>
@@ -185,29 +185,51 @@
 %% ── Colloquia ─────────────────────────────────────────────────
 \cvsection{Undergraduate Colloquia \& Related Talks}
 <% for e in colloquia %>
-\cvitem{<< e.year >>}{\textbf{<< e.institution >>}, << e.event >>.}
+\cvitem{<< e.year >>}{\textbf{<< e.institution >>}, << e.event >>.<%- if e.url %> {\detailfont\small\href{<< e.url >>}{video recording}}<% endif %>}
 <% endfor %>
 
 %% ── Public Lectures ───────────────────────────────────────────
 \cvsection{Invited Public Lectures}
 <% for e in publicLectures %>
-\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.event %>, << e.event >><% endif %>.\newline {\detailfont\small << e.institution >><%- if e.location %>, << e.location >><% endif %>}}
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.event %>, << e.event >><% endif %>.\newline {\detailfont\small << e.institution >><%- if e.location %>, << e.location >><% endif %><%- if e.url %>. \href{<< e.url >>}{video recording}<% endif %>}}
 <% endfor %>
 
 %% ── Research Talks ────────────────────────────────────────────
 \cvsection{Select Invited Research Talks}
 <% for e in researchTalks %>
-\cvitem{<< e.year >>}{\textbf{<< e.institution >>}, << e.event >><%- if e.detail %>, << e.detail >><% endif %>.}
+\cvitem{<< e.year >>}{\textbf{<< e.institution >>}, << e.event >><%- if e.detail %>, << e.detail >><% endif %>.<%- if e.url %> {\detailfont\small\href{<< e.url >>}{video recording}}<% endif %>}
 <% endfor %>
 
 %% ── Service group ─────────────────────────────────────────────
 \cvgroup{Service}
 
-%% ── Service ───────────────────────────────────────────────────
-\cvsection{Service \& Outreach}
-<% for e in service %>
+%% ── Department & University ───────────────────────────────────
+\cvsection{Department \& University}
+<% for e in service.departmentUniversity %>
 \cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.institution %>, << e.institution >><% endif %><%- if e.detail %>.\newline {\detailfont\small << e.detail >>}<% endif %>.}
 <% endfor %>
+
+%% ── Mathematical Community ────────────────────────────────────
+\cvsection{Mathematical Community}
+
+\cvsubsection{Graduate Student Mentoring}
+\cvitem{}{\textit{<< mentoring.intro >>}}
+<% for s in mentoring.students %>
+\cvitem{<< s.years >>}{\textbf{<< s.name >>} (<< s.institution >>), << s.degree >>.<%- if s.thesis %>\newline {\detailfont\small Thesis: << s.thesis >>}<% endif %>}
+<% endfor %>
+
+\cvsubsection{Refereeing \& Peer Review}
+<% if refereeing.journals and refereeing.journals | length %>\cvitem{Journals}{<< refereeing.journals | join(", ") >>.}<% endif %>
+<% if refereeing.conferences and refereeing.conferences | length %>\cvitem{Conferences}{<< refereeing.conferences | join(", ") >>.}<% endif %>
+<% if refereeing.books and refereeing.books | length %>\cvitem{Book Manuscripts}{<< refereeing.books | join(", ") >>.}<% endif %>
+
+\cvsubsection{Outreach}
+<% for e in service.mathematicalCommunity %>
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.institution %>, << e.institution >><% endif %><%- if e.detail %>.\newline {\detailfont\small << e.detail >>}<% endif %>.}
+<% endfor %>
+
+%% ── Other group ───────────────────────────────────────────────
+\cvgroup{Other}
 
 %% ── Awards ────────────────────────────────────────────────────
 \cvsection{Fellowships \& Awards}

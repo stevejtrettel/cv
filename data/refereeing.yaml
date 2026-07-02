@@ -1,0 +1,14 @@
+# Refereeing & peer review. Compact grouped lists — no per-item fields to track.
+# Just add a venue name to the relevant list.
+
+journals:
+  - Experimental Mathematics
+  - Topology and its Applications
+  - Geometry & Topology
+
+conferences:
+  - Bridges (Mathematical Art & Culture)
+
+books:
+  - Springer
+  - AMS book series

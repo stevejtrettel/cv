@@ -5,7 +5,12 @@
       "WebFetch(domain:www.insmi.cnrs.fr)",
       "WebFetch(domain:www.turtlebay.org)",
       "WebFetch(domain:library.ssf.net)",
-      "Bash(node build.mjs)"
+      "Bash(node build.mjs)",
+      "WebSearch",
+      "WebFetch(domain:stevejtrettel.site)",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:wonderfest.org)",
+      "WebFetch(domain:www.h-its.org)"
     ]
   }
 }

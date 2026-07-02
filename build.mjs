@@ -95,6 +95,8 @@ let data = {
   publicLectures: loadYaml('public-lectures.yaml'),
   researchTalks: loadYaml('research-talks.yaml'),
   service: loadYaml('service.yaml'),
+  mentoring: loadYaml('mentoring.yaml'),
+  refereeing: loadYaml('refereeing.yaml'),
   awards: loadYaml('awards.yaml'),
   software: loadYaml('software.yaml'),
   languages: loadYaml('languages.yaml'),
