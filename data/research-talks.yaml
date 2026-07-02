@@ -49,8 +49,7 @@
 
 - year: Winter 2024
   institution: Joint Math Meetings
-  event: "Session: 3D Fabricated Materials for Ed."
-  detail: with Edmund Harriss
+  event: joint talk with Edmund Harriss
 
 - year: Fall 2022
   institution: UC Santa Cruz
@@ -109,22 +108,23 @@
   institution: Heidelberg University
   event: Geometry & Dynamics Research Station
 
-- year: Spring 2019
-  institution: UC Irvine
-  event: Topology Seminar
-
-- year: Spring 2019
-  institution: Stanford University
-  event: Geometric Topology Seminar
-
-- year: Winter 2019
-  institution: University of Virginia
-  event: Geometry Seminar
-
-- year: Winter 2019
-  institution: Cornell University
-  event: Topology Seminar
-
-- year: Fall 2018
-  institution: University of Minnesota
-  event: Topology Seminar
+# --- Pre-Summer 2019 (grad school) talks hidden; uncomment to restore ---
+# - year: Spring 2019
+#   institution: UC Irvine
+#   event: Topology Seminar
+#
+# - year: Spring 2019
+#   institution: Stanford University
+#   event: Geometric Topology Seminar
+#
+# - year: Winter 2019
+#   institution: University of Virginia
+#   event: Geometry Seminar
+#
+# - year: Winter 2019
+#   institution: Cornell University
+#   event: Topology Seminar
+#
+# - year: Fall 2018
+#   institution: University of Minnesota
+#   event: Topology Seminar

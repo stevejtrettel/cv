@@ -36,32 +36,35 @@ departmentUniversity:
   - year: "2020"
     title: Department Technology Coordinator
     institution: Stanford Mathematics Department
-    detail: Selected electronic tools to help move mathematics courses online during the pandemic, arranged for approval through the university, worked individually with instructors on remote teaching needs
+    detail: Selected and deployed tools to move mathematics courses online during the pandemic, supporting instructors individually
 
-  - year: "2018--2019"
-    title: "Directed Reading Program: Co-Founder"
-    institution: UC Santa Barbara
-    detail: Co-founded and organized a DRP pairing undergraduate students with graduate mentors. Successfully applied for and received a grant for its continuation
+# --- Pre-Summer 2019 (grad school, UC Santa Barbara) service hidden; uncomment to restore ---
+#  - year: "2018--2019"
+#    title: "Directed Reading Program: Co-Founder"
+#    institution: UC Santa Barbara
+#    detail: Co-founded and organized a DRP pairing undergraduate students with graduate mentors. Successfully applied for and received a grant for its continuation
+#
+#  - year: "2018--2019"
+#    title: "Directed Reading Program: Mentor"
+#    institution: UC Santa Barbara
+#
+#  - year: "2018--2019"
+#    title: "SIMS: Tutor"
+#    institution: UC Santa Barbara
+#    detail: Program pairing graduate students with undergraduates from underrepresented communities
+#
+#  - year: "2016--2019"
+#    title: "Graduate Topology Seminar: Organizer"
+#    institution: UC Santa Barbara
+#    detail: Organized schedule, invited speakers, gave talks
 
-  - year: "2018--2019"
-    title: "Directed Reading Program: Mentor"
-    institution: UC Santa Barbara
-
-  - year: "2018--2019"
-    title: "SIMS: Tutor"
-    institution: UC Santa Barbara
-    detail: Program pairing graduate students with undergraduates from underrepresented communities
-
-  - year: "2016--2019"
-    title: "Graduate Topology Seminar: Organizer"
-    institution: UC Santa Barbara
-    detail: Organized schedule, invited speakers, gave talks
-
-mathematicalCommunity:
-  - year: "2021"
-    title: "Topology beyond the Chalkboard: Speaker"
-    detail: NCNGTC Virtual Conference. Mini-course on creating teaching/outreach animations, session on writing outreach talks
-
-  - year: "2015--2018"
-    title: "National Science Fair: Speaker, Judge"
-    detail: "Jr. Science & Humanities Symposium. Judge in mathematics category. Organizer of STEM outings, panel discussions. Invited speaker"
+# Outreach items hidden; a summary sentence is shown instead (see the Outreach
+# subsection in the template). Uncomment these and remove the [] below to restore.
+mathematicalCommunity: []
+#  - year: "2021"
+#    title: "Topology beyond the Chalkboard: Speaker"
+#    detail: NCNGTC Virtual Conference. Mini-course on creating teaching/outreach animations, session on writing outreach talks
+#
+#  - year: "2015--2018"
+#    title: "National Science Fair: Speaker, Judge"
+#    detail: "Jr. Science & Humanities Symposium. Judge in mathematics category. Organizer of STEM outings, panel discussions. Invited speaker"

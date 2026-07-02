@@ -224,6 +224,7 @@
 <% if refereeing.books and refereeing.books | length %>\cvitem{Book Manuscripts}{<< refereeing.books | join(", ") >>.}<% endif %>
 
 \cvsubsection{Outreach}
+\cvitem{}{\textit{I regularly give public lectures to a wide range of audiences---from grade-school students to retirees---catalogued in the Talks section above.}}
 <% for e in service.mathematicalCommunity %>
 \cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.institution %>, << e.institution >><% endif %><%- if e.detail %>.\newline {\detailfont\small << e.detail >>}<% endif %>.}
 <% endfor %>

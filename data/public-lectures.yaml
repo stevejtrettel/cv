@@ -78,16 +78,18 @@
   location: San Jose, CA (Virtual)
   title: "When the shortest path doesn't look straight: geometry in optics, optimization and relativity"
 
-- year: Summer 2019
-  institution: Santa Barbara Media Arts Show
-  location: UC Santa Barbara
-  title: "Curved and twisted worlds: a Virtual Reality Exploration of 3-manifold topology"
+# --- Hidden; uncomment to restore ---
+# - year: Summer 2019
+#   institution: Santa Barbara Media Arts Show
+#   location: UC Santa Barbara
+#   title: "Curved and twisted worlds: a Virtual Reality Exploration of 3-manifold topology"
 
-- year: Spring 2018
-  institution: National Junior Science and Humanities Symposium
-  title: "High dimensions in mathematics, computing and the 'real world'"
-
-- year: Summer 2018
-  institution: Santa Barbara Media Arts Show
-  location: UC Santa Barbara
-  title: 3-dimensional shadows of 4-dimensional objects
+# --- Pre-Summer 2019 (grad school) talks hidden; uncomment to restore ---
+# - year: Spring 2018
+#   institution: National Junior Science and Humanities Symposium
+#   title: "High dimensions in mathematics, computing and the 'real world'"
+#
+# - year: Summer 2018
+#   institution: Santa Barbara Media Arts Show
+#   location: UC Santa Barbara
+#   title: 3-dimensional shadows of 4-dimensional objects

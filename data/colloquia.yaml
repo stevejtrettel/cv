@@ -83,12 +83,13 @@
   event: Plenary Speaker
   title: "Ray Optics, Geodesics and Curved Space"
 
-- year: Spring 2019
-  institution: Cornell University
-  event: Undergraduate Math Club
-  title: "Life in hyperbolic space: how a nonzero curvature tensor would screw up your daily routine."
-
-- year: Winter 2019
-  institution: University of Virginia
-  event: Undergraduate Math Club
-  title: "1,000 Ways to Die in Hyperbolic Space"
+# --- Pre-Summer 2019 (grad school) talks hidden; uncomment to restore ---
+# - year: Spring 2019
+#   institution: Cornell University
+#   event: Undergraduate Math Club
+#   title: "Life in hyperbolic space: how a nonzero curvature tensor would screw up your daily routine."
+#
+# - year: Winter 2019
+#   institution: University of Virginia
+#   event: Undergraduate Math Club
+#   title: "1,000 Ways to Die in Hyperbolic Space"
