@@ -113,16 +113,17 @@
 
 - year: "2024"
   venue: Wignall Art Museum
-  title: 3.Dimensional.Space
+  title: Thurston Geometries
   detail: Large-Screen Video Installation
   collaborators: [remi-coulon, henry-segerman, sabetta-matsumoto]
   venueUrl: https://www.chaffey.edu/wignall/
   url: https://stevejtrettel.site/exhibitions/wignall-3d-space-2024/
 
-- year: "2024"
-  venue: MAA Golden Section
-  title: Gyroid, and Connect Sum
-  venueUrl: https://www.golden.maa.org/
+# --- Temporarily hidden; uncomment to restore ---
+# - year: "2024"
+#   venue: MAA Golden Section
+#   title: Gyroid, and Many Paths to the Beach
+#   venueUrl: https://www.golden.maa.org/
 
 - year: "2024"
   venue: Joint Mathematics Meeting
@@ -139,14 +140,15 @@
 
 - year: "2023"
   venue: Joint Mathematics Meeting
-  title: Knots in the 3 Sphere
+  title: The Geometry of Knot Complements
   venueUrl: https://jointmathematicsmeetings.org/jmm
   url: https://stevejtrettel.site/exhibitions/jmm-2023/
 
-- year: "2022"
-  venue: MAA Golden Section
-  title: The Geometry of Knot Complements
-  venueUrl: https://www.golden.maa.org/
+# --- Temporarily hidden; uncomment to restore ---
+# - year: "2022"
+#   venue: MAA Golden Section
+#   title: The Geometry of Knot Complements
+#   venueUrl: https://www.golden.maa.org/
 
 - year: "2020"
   venue: Gaukurinn, Reykjavik
