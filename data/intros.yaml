@@ -7,23 +7,7 @@
 #   publications, exhibitions, software, inProgress, softwareSystems, researchProjects
 #
 # Leave a key out (or blank) and no paragraph appears. Any value may contain an
-# inline link written as [visible text](https://url). Wrap draft text in ...
+# inline link written as [visible text](https://url). Wrap draft text in @@...@@
 # to render it bright red (Claude-authored / needs review).
-
-researchCreativeWork: >-
-  My research and creative work takes four forms: peer-reviewed papers, works of
-  mathematical fine art, a feature documentary film, and software for illustration and discovery.
-
-publications: >-
-  Twelve peer-reviewed papers, each in its field's standard format---journals in pure
-  mathematics, and conference proceedings in computer science and mathematical art---plus
-  an invited magazine article detailing my illustration of knot complements.
-
-exhibitions: >-
-  Sixteen works of art, each deeply tied to mathematics and accepted into a juried
-  exhibition or competitive museum show, listed here by the exhibitions where they appeared.
-
-software: >-
-  Software for myself and other mathematicians, for both illustration and research.
-  Systems are larger, adaptable tools; projects are purpose-built to solve a problem, gather
-  data, or illustrate an idea. All freely available on GitHub or as npm packages.
+#
+# (main branch: intentionally empty — the everyday CV has no section descriptions.)
