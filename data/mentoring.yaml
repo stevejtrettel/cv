@@ -4,11 +4,10 @@
 intro: "Though USF has no graduate program in mathematics, I have mentored several graduate students---meeting weekly, suggesting projects, and revising dissertations."
 
 students:
-  - name: Brian Day
-    institution: Georgia Tech
-    degree: PhD in Physics
-    years: "2020--2023"
-    thesis: "Effects of Curvature on Dynamics of Extended Body Systems"
+  - name: Fabian Lander
+    institution: Max Planck Institute
+    degree: PhD in Mathematics
+    years: "2025--present"
 
   - name: Jacob Guy
     institution: San Diego State University
@@ -16,7 +15,8 @@ students:
     years: "2024--2025"
     thesis: "Constructing regular polygons in the hyperbolic plane"
 
-  - name: Fabian Lander
-    institution: Max Planck Institute
-    degree: PhD in Mathematics
-    years: "2025--present"
+  - name: Brian Day
+    institution: Georgia Tech
+    degree: PhD in Physics
+    years: "2020--2023"
+    thesis: "Effects of Curvature on Dynamics of Extended Body Systems"

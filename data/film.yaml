@@ -1,0 +1,9 @@
+# Film / documentary work. One entry per film.
+#   title (required); year, role, detail optional.
+#   detail supports inline links: [visible text](https://url).
+
+- year: "2025"
+  title: "Felix Klein: Insights from the Outside"
+  role: Co-Presenter & Director of Computer Graphics
+  url: https://www.youtube.com/watch?v=yCAJdX6qrLk
+  detail: "Feature documentary; I co-presented the mathematical segments with Anna Wienhard and, as Director of Computer Graphics, produced all of its mathematical illustration."

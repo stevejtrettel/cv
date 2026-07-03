@@ -86,8 +86,10 @@ let data = {
   instituteVisits: loadYaml('institute-visits.yaml'),
   education: loadYaml('education.yaml'),
   publications: loadYaml('publications.yaml'),
+  invited: loadYaml('invited.yaml'),
   inProgress: loadYaml('in-progress.yaml'),
   exhibitions: loadYaml('exhibitions.yaml'),
+  film: loadYaml('film.yaml'),
   featuredWork: loadYaml('featured-work.yaml'),
   courseNotes: loadYaml('course-notes.yaml'),
   teaching: loadYaml('teaching.yaml'),
@@ -100,11 +102,50 @@ let data = {
   awards: loadYaml('awards.yaml'),
   software: loadYaml('software.yaml'),
   languages: loadYaml('languages.yaml'),
+  intros: loadYaml('intros.yaml'),
 };
 
-// Resolve slugs → names, then escape for LaTeX
+// Convert markdown links [text](url) → \href{url}{text}. Runs AFTER escaping,
+// so authors can write inline links in any field (intros, details, notes, …).
+function linkify(data) {
+  if (typeof data === 'string') {
+    return data.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '\\href{$2}{$1}');
+  }
+  if (Array.isArray(data)) return data.map(linkify);
+  if (data && typeof data === 'object') {
+    const out = {};
+    for (const [k, v] of Object.entries(data)) out[k] = linkify(v);
+    return out;
+  }
+  return data;
+}
+
+// CV date (month + year). Auto-set to the build date; hardcode a string here
+// instead if you'd rather pin it (e.g. data.date = 'July 2026').
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'];
+const now = new Date();
+data.date = `${MONTHS[now.getMonth()]} ${now.getFullYear()}`;
+
+// Mark @@...@@ as Claude-authored placeholder text → \claude{} (bright red).
+function claudify(data) {
+  if (typeof data === 'string') {
+    return data.replace(/@@([\s\S]+?)@@/g, '\\claude{$1}');
+  }
+  if (Array.isArray(data)) return data.map(claudify);
+  if (data && typeof data === 'object') {
+    const out = {};
+    for (const [k, v] of Object.entries(data)) out[k] = claudify(v);
+    return out;
+  }
+  return data;
+}
+
+// Resolve slugs → names, then escape for LaTeX, then wire up inline links/markers
 data = resolveCollaborators(data);
 data = escapeData(data);
+data = linkify(data);
+data = claudify(data);
 
 // Configure Nunjucks with custom delimiters to avoid LaTeX brace conflicts
 const env = new nunjucks.Environment(

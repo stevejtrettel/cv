@@ -72,10 +72,10 @@ projects:
     url: https://github.com/FabianLander/variety-point-clouds
     collaborators: [fabi-lander]
 
-  - title: Woven Surfaces
-    description: "Computing periodic woven designs on surfaces."
+  - title: Knitted Surfaces
+    description: "Computing periodic knitted designs on surfaces."
     tech: JavaScript
-    url: https://github.com/erik2810/knitted-models
+    url: https://github.com/stevejtrettel/knitted-surfaces
     collaborators: [mpi-math-lab]
 
 specificPrograms:

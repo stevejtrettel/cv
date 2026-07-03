@@ -28,6 +28,10 @@
   linkcolor=linkColor,
 }
 
+%% ── Multi-column ──────────────────────────────────────────────
+\usepackage{multicol}
+\setlength{\columnsep}{1.5em}
+
 %% ── Tabular ───────────────────────────────────────────────────
 \usepackage{array}
 \usepackage{longtable}
@@ -52,10 +56,18 @@
 
 %% ── Custom commands ───────────────────────────────────────────
 
+% Placeholder text written by Claude — bright red, flags "review/rewrite me".
+% Authored in the data as @@...@@ (converted to \claude{} at build time).
+\definecolor{claudeColor}{rgb}{0.90,0.10,0.10}
+\newcommand{\claude}[1]{{\color{claudeColor}#1}}
+
 % Section heading: gold bar on the left, title in Libertinus Sans
 \newlength{\baseletterht}
 \settoheight{\baseletterht}{{\sectionfont\LARGE o}}
 \addtolength{\baseletterht}{-0.95ex}
+\newlength{\subbarht}
+\settoheight{\subbarht}{{\sectionfont\Large o}}
+\addtolength{\subbarht}{-0.95ex}
 \newcommand{\cvsection}[1]{%
   \par\addvspace{2.5ex}%
   \parbox[t]{\hintscolwidth}{\strut\raggedleft\raisebox{\baseletterht}{\color{accentColor}\rule{\hintscolwidth}{0.95ex}}}%
@@ -66,18 +78,29 @@
 
 % Group heading: large gray text spanning the page, no bar or rule
 \newcommand{\cvgroup}[1]{%
-  \par\addvspace{3.5ex}%
+  \par\addvspace{5.5ex}%
   {\sectionfont\fontsize{20pt}{24pt}\selectfont\bfseries\color{grayColor}#1}%
   \par\nobreak\addvspace{0.5ex}%
 }
 
-% Subsection heading
+% Subsection heading: small green square in the hint column echoing the gold bar
 \newcommand{\cvsubsection}[1]{%
-  \par\addvspace{1ex}%
-  \parbox[t]{\hintscolwidth}{\strut}%
+  \par\addvspace{2.4ex}%
+  \parbox[t]{\hintscolwidth}{\strut\raggedleft\raisebox{\subbarht}{\color{mainColor}\rule{0.95ex}{0.95ex}}}%
   \hspace{\sepcolwidth}%
   \parbox[t]{\maincolwidth}{\strut{\sectionfont\Large\bfseries\color{grayColor}#1}}%
   \par\nobreak\addvspace{0.5ex}%
+}
+
+% Optional context paragraph under a section or subsection heading.
+% Italic, sits in the main column (hint column blank) so it lines up with the
+% entries: pulled up close to the heading, with a slight gap before the list.
+\newcommand{\cvintro}[1]{%
+  \vspace{-1.2ex}%
+  \begingroup\leftskip=0.5\hintscolwidth\relax
+  {\itshape\color{grayColor}\RaggedRight #1\par}%
+  \endgroup
+  \addvspace{1.1ex}%
 }
 
 % Single CV entry: \cvitem{year}{content}
@@ -93,7 +116,7 @@
 
 %% ── Header ────────────────────────────────────────────────────
 {\sectionfont\fontsize{36pt}{42pt}\selectfont\bfseries\color{mainColor} STEVE\,\,TRETTEL}\\[0.6em]
-{\color{grayColor}\slshape \href{mailto:strettel@usfca.edu}{strettel@usfca.edu}\quad \href{https://stevejtrettel.site}{stevejtrettel.site}\quad \href{https://github.com/stevejtrettel}{github.com/stevejtrettel}}
+{\color{grayColor}\slshape \href{mailto:strettel@usfca.edu}{strettel@usfca.edu}\quad \href{https://stevejtrettel.site}{stevejtrettel.site}\quad \href{https://github.com/stevejtrettel}{github.com/stevejtrettel}\hfill << date >>}
 
 \vspace{2.5em}
 
@@ -106,7 +129,7 @@
 %% ── Institute Visits ──────────────────────────────────────────
 \cvsection{Research Residencies}
 <% for e in instituteVisits %>
-\cvitem{<< e.years >>}{\textbf{<< e.institution >>}, << e.location >>.}
+\cvitem{<< e.years >>}{\textbf{<< e.institution >>}, << e.location >>.<%- if e.detail %>\newline {\detailfont\small << e.detail >>}<% endif %>}
 <% endfor %>
 
 %% ── Education ─────────────────────────────────────────────────
@@ -117,51 +140,72 @@
 
 %% ── Research & Creative Work group ────────────────────────────
 \cvgroup{Research \& Creative Work}
+<% if intros.researchCreativeWork %>\cvintro{<< intros.researchCreativeWork >>}<% endif %>
 
 %% ── Publications ──────────────────────────────────────────────
 \cvsection{Publications}
+<% if intros.publications %>\cvintro{<< intros.publications >>}<% endif %>
+
+\cvsubsection{Peer-Reviewed Articles}
 <% for e in publications %>
 \cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.coauthors %>, \textit{with << e.coauthors | join(", ") >>}<% endif %>.<%- if e.url %> Published in \href{<< e.url >>}{<< e.venue >>}<%- if e.arxiv %> (\href{<< e.arxiv >>}{arXiv version})<% endif %>.<%- elif e.venue %> << e.venue >><%- if e.arxiv %> (\href{<< e.arxiv >>}{arXiv version})<% endif %>.<%- elif e.arxiv %> \href{<< e.arxiv >>}{arXiv preprint}.<% endif %>}
 <% endfor %>
 
+\cvsubsection{Invited Contributions}
+<% for e in invited %>
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.coauthors %>, \textit{with << e.coauthors | join(", ") >>}<% endif %>.<%- if e.url %> Published in \href{<< e.url >>}{<< e.venue >>}<%- if e.arxiv %> (\href{<< e.arxiv >>}{arXiv version})<% endif %>.<%- elif e.venue %> << e.venue >><%- if e.arxiv %> (\href{<< e.arxiv >>}{arXiv version})<% endif %>.<%- elif e.arxiv %> \href{<< e.arxiv >>}{arXiv preprint}.<% endif %>}
+<% endfor %>
+
 %% ── Preprints & Work in Progress ──────────────────────────────
-\cvsection{Preprints \& Work in Progress}
+\cvsubsection{Preprints \& Work in Progress}
+<% if intros.inProgress %>\cvintro{<< intros.inProgress >>}<% endif %>
 <% for e in inProgress %>
 \cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.coauthors and e.coauthors | length %>, \textit{with << e.coauthors | join(", ") >>}<% endif %>.<%- if e.url %> Available at \href{<< e.url >>}{<< e.url | replace("https://", "") >>}<%- if e.arxiv %> (\href{<< e.arxiv >>}{arXiv version})<% endif %>.<%- elif e.arxiv %> Available at \href{<< e.arxiv >>}{<< e.arxiv | replace("https://", "") >>}.<% endif %><%- if e.venue %>\newline << e.venue >><% endif %>}
 <% endfor %>
 
 %% ── Art Exhibitions ───────────────────────────────────────────
 \cvsection{Art Exhibitions}
+<% if intros.exhibitions %>\cvintro{<< intros.exhibitions >>}<% endif %>
 <% for e in exhibitions %>
 \cvitem{<< e.year >>}{\textbf{<< e.venue >>}, \textit{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %><%- if e.detail %>. << e.detail >><% endif %><%- if e.juror %>. Juror: << e.juror >><% endif %>.<%- if e.url %> {\detailfont\small\href{<< e.url >>}{exhibition details}}<% endif %>}
 <% endfor %>
 
+%% ── Film ──────────────────────────────────────────────────────
+\cvsection{Film}
+<% for e in film %>
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.role %>, << e.role >><% endif %>.<%- if e.detail %>\newline {\detailfont\small << e.detail >><%- if e.url %> \href{<< e.url >>}{watch the trailer}<% endif %>}<% endif %>}
+<% endfor %>
+
 %% ── Software ──────────────────────────────────────────────────
 \cvsection{Mathematical Software}
+<% if intros.software %>\cvintro{<< intros.software >>}<% endif %>
 
 \cvsubsection{Software Systems}
+<% if intros.softwareSystems %>\cvintro{<< intros.softwareSystems >>}<% endif %>
 <% for e in software.systems %>
-\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{See Code on GitHub}.<% endif %>\newline {\detailfont\small << e.description >>}}
+\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{See Code on GitHub}.<% endif %>\newline {\detailfont\small << e.description >><%- if e.detail %> << e.detail >><% endif %>}}
 <% endfor %>
 
 \cvsubsection{Research Projects}
+<% if intros.researchProjects %>\cvintro{<< intros.researchProjects >>}<% endif %>
 <% for e in software.projects %>
-\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{See Code on GitHub}.<% endif %>\newline {\detailfont\small << e.description >>}}
+\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{See Code on GitHub}.<% endif %>\newline {\detailfont\small << e.description >><%- if e.detail %> << e.detail >><% endif %>}}
 <% endfor %>
 
 <# Specific Programs section hidden — data retained in software.yaml, not displayed #>
 
 %% ── Featured Work ─────────────────────────────────────────────
-\cvsection{Featured Work:}
+\cvsection{Featured Work}
 <% for e in featuredWork %>
 \cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %><%- if e.detail %>. \textit{<< e.detail >>}<% endif %><%- if e.venue %>. Published in <% if e.url %>\href{<< e.url >>}{<< e.venue >>}<% else %><< e.venue >><% endif %><% endif %>.}
 <% endfor %>
 
 %% ── Teaching group ────────────────────────────────────────────
 \cvgroup{Teaching}
+<% if intros.teaching %>\cvintro{<< intros.teaching >>}<% endif %>
 
 %% ── Course Notes ──────────────────────────────────────────────
-\cvsection{Course Notes}
+\cvsection{Course Notes \& Book Drafts}
 <% for e in courseNotes %>
 \cvitem{<< e.number | default("") >>}{\textbf{<< e.title >>}<%- if e.pages %> (<< e.pages >> pages)<% endif %><%- if e.url %>. \href{<< e.url >>}{<< e.url | replace("https://", "") >>}<% endif %><%- if e.detail %>.\newline {\detailfont\small << e.detail >>}<% else %>.<% endif %>}
 <% endfor %>
@@ -181,27 +225,37 @@
 
 %% ── Talks group ───────────────────────────────────────────────
 \cvgroup{Talks}
-
-%% ── Colloquia ─────────────────────────────────────────────────
-\cvsection{Undergraduate Colloquia \& Related Talks}
-<% for e in colloquia %>
-\cvitem{<< e.year >>}{\textbf{<< e.institution >>}, << e.event >>.<%- if e.url %> {\detailfont\small\href{<< e.url >>}{video recording}}<% endif %>}
-<% endfor %>
+<% if intros.talks %>\cvintro{<< intros.talks >>}<% endif %>
 
 %% ── Public Lectures ───────────────────────────────────────────
-\cvsection{Invited Public Lectures}
+\cvsection{Invited Lectures}
 <% for e in publicLectures %>
-\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.event %>, << e.event >><% endif %>.\newline {\detailfont\small << e.institution >><%- if e.location %>, << e.location >><% endif %><%- if e.url %>. \href{<< e.url >>}{video recording}<% endif %>}}
+\cvitem{<< e.year >>}{\textbf{<< e.title >>}<%- if e.event %>, << e.event >><% endif %>.\newline {\detailfont\small << e.institution >><%- if e.location %>, << e.location >><% endif %><%- if e.url %>. \href{<< e.url >>}{video}<% endif %>}}
 <% endfor %>
 
-%% ── Research Talks ────────────────────────────────────────────
-\cvsection{Select Invited Research Talks}
+%% ── Seminars & Colloquia (2-column, compact) ──────────────────
+\cvsection{Seminars, Colloquia \& Conferences}
+<% if intros.researchTalks %>\cvintro{<< intros.researchTalks >>}<% endif %>
+\begin{multicols}{2}
+\raggedright
 <% for e in researchTalks %>
-\cvitem{<< e.year >>}{\textbf{<< e.institution >>}, << e.event >><%- if e.detail %>, << e.detail >><% endif %>.<%- if e.url %> {\detailfont\small\href{<< e.url >>}{video recording}}<% endif %>}
+{\small\color{grayColor}<< e.year >>}\enspace\textbf{<< e.institution >>}<%- if e.url %>\enspace{\detailfont\small\href{<< e.url >>}{video}}<% endif %>\par\addvspace{0.4em}
 <% endfor %>
+\end{multicols}
+
+%% ── Undergraduate Talks (2-column, compact) ───────────────────
+\cvsection{Undergraduate Talks}
+<% if intros.colloquia %>\cvintro{<< intros.colloquia >>}<% endif %>
+\begin{multicols}{2}
+\raggedright
+<% for e in colloquia %>
+{\small\color{grayColor}<< e.year >>}\enspace\textbf{<< e.institution >>}<%- if e.url %>\enspace{\detailfont\small\href{<< e.url >>}{video}}<% endif %>\par\addvspace{0.4em}
+<% endfor %>
+\end{multicols}
 
 %% ── Service group ─────────────────────────────────────────────
 \cvgroup{Service}
+<% if intros.service %>\cvintro{<< intros.service >>}<% endif %>
 
 %% ── Department & University ───────────────────────────────────
 \cvsection{Department \& University}
@@ -231,6 +285,7 @@
 
 %% ── Other group ───────────────────────────────────────────────
 \cvgroup{Other}
+<% if intros.other %>\cvintro{<< intros.other >>}<% endif %>
 
 %% ── Awards ────────────────────────────────────────────────────
 \cvsection{Fellowships \& Awards}

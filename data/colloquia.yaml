@@ -6,31 +6,43 @@
 - year: Spring 2025
   institution: Penn State
   event: Math Club Public Talk
+  title: "Why You Can't Tie Your Shoes in the 4th Dimension"
+  topic: 4D Knots
 
 - year: Spring 2025
   institution: Penn State
   event: Student Colloquium
+  title: "Mathematics of Beautiful Graphics"
+  topic: Math for Art
 
 - year: Spring 2025
   institution: Santa Clara University
   event: Department Colloquium
+  title: "Classical Physics in Curved Space"
+  topic: HyperbolicPhys
 
 - year: Spring 2025
   institution: Elon University
   event: Student Lecture
+  title: "Mathematics of Beautiful Graphics"
+  topic: Math for Art
 
 - year: Fall 2024
   institution: San Jose State
   event: Department Colloquium
+  title: "From Geometry to Machine Learning"
+  topic: Geo+ML
 
 - year: Fall 2024
   institution: UC Irvine
   event: Undergraduate Colloquium
+  title: Modern Geometry and Machine Learning
+  topic: Geo+ML
 
 - year: Spring 2024
   institution: University of Arkansas
   event: Undergraduate Colloquium
-  title: The Poincare Conjecture
+  title: The Poincaré Conjecture
 
 - year: Spring 2024
   institution: University of Arkansas
@@ -43,9 +55,9 @@
   title: The Linear Algebra of Color Vision
 
 - year: Spring 2022
-  institution: Summer At ICERM REU, Brown University
+  institution: ICERM REU
   event: Invited Special Lecture
-  title: Geometry and the Poincare Conjecture
+  title: Geometry and the Poincaré Conjecture
 
 - year: Spring 2022
   institution: Santa Clara University
@@ -58,12 +70,12 @@
   title: What is Hyperbolic Dehn Surgery?
 
 - year: Winter 2022
-  institution: U Arkansas
+  institution: University of Arkansas
   event: Honors College Lecture
   title: Modern Geometry
 
 - year: Winter 2022
-  institution: Stanford
+  institution: Stanford University
   event: SUMO
   title: The Classification of n-Manifolds
 
@@ -79,9 +91,13 @@
   title: "A history of mathematical optics: from the Greeks to Einstein"
 
 - year: Spring 2021
-  institution: MAA Golden Sectional Meeting
+  institution: MAA Golden Section
   event: Plenary Speaker
   title: "Ray Optics, Geodesics and Curved Space"
+
+- year: Spring 2021
+  institution: Stanford Math Circle
+  event: Public Talk
 
 # --- Pre-Summer 2019 (grad school) talks hidden; uncomment to restore ---
 # - year: Spring 2019

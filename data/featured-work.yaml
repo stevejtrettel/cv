@@ -4,6 +4,11 @@
 #   url    - link for the venue (the published version / venue page)
 #   detail, collaborators - optional
 
+# --- Hidden for now (smaller than the other features); uncomment to restore ---
+# - year: "2024"
+#   title: Modern Geometry
+#   detail: "Public lecture by Jesse Wolfson at St John's College featuring my work and animations"
+
 - year: "2024"
   title: "What's Happening in the Mathematical Sciences, Vol. 13"
   venue: AMS Books

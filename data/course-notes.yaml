@@ -21,6 +21,7 @@
   detail: Second draft of a textbook for a 1-semester course in real analysis emphasizing historically important problems and an axiomatic approach to integration.
 
 - title: Shader Programming
+  number: Graduate Mini Course
   pages: 130
   url: https://shaders.stevejtrettel.site/
   detail: Extensive course notes (including fully worked examples and homework) introducing GPU programming to mathematicians. Taught at CIRM Graduate Winter School.

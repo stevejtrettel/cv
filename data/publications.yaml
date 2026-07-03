@@ -29,11 +29,6 @@
   arxiv: https://arxiv.org/abs/1805.04256
 
 - year: "2023"
-  title: "Visualizing Knot Complements"
-  venue: MAA Focus
-  url: https://digitaleditions.walsworth.com/publication/?i=803817&article_id=4652761&view=articleBrowser
-
-- year: "2023"
   title: "Modeling Graphs Beyond Hyperbolic: Graph Neural Networks in Symmetric Positive Definite Matrices"
   coauthors: [wei-zhao, federico-lopez, max-riestenberg, michael-strube, dia-taha]
   venue: ECML (European Congress of Machine Learning)
