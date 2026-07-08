@@ -1,109 +1,109 @@
+# `slug` links to the project's page at stevejtrettel.site/software/<slug>/ .
+# `status` (with no slug) shows an italic note in place of a link. `url` is the
+# GitHub repo, kept for record (the CV links to the website page, not GitHub).
+
 systems:
   - title: Three.js Demos
-    description: "A system for creating and running Three.js animations."
+    description: "A TypeScript/three.js framework for interactive mathematical visualization: geodesic integration, parametric surfaces, curvature rendering, and GPU path tracing. It underlies most of my illustration code."
     tech: JavaScript / Three.js
+    slug: threejs-demos
     url: https://github.com/stevejtrettel/threejs-demos
 
   - title: Shader Sandbox
-    description: "An npm package for running Shadertoy-style shaders locally."
+    description: "A GLSL development environment and embeddable runtime, shipped as an npm package, for authoring and sharing mathematical shaders: PDE simulations, hyperbolic tilings, and other highly parallelizable computations."
     tech: JavaScript / GLSL
+    slug: shader-sandbox
     url: https://github.com/stevejtrettel/shader-sandbox
 
   - title: Path Tracer
-    description: "Photorealistic path tracing of signed distance fields in GLSL."
+    description: "A GPU path tracer solving the rendering equation by Monte Carlo path integration, for photorealistic images of implicit surfaces and signed distance fields."
     tech: GLSL
+    slug: path-tracer
     url: https://github.com/stevejtrettel/PathTracer
 
-  - title: Math Lib
-    description: "A TypeScript framework for geometry, topology, and algebra."
-    tech: TypeScript / Three.js
-    url: https://github.com/stevejtrettel/math-lib
+  # Removed for now (not yet developed); uncomment to restore.
+  # - title: Math Lib
+  #   description: "A TypeScript library for differential-geometric (and soon more general) computation: dimension-general Riemannian and symplectic structures, musical isomorphisms, and symplectic integrators, built for live animation and speed."
+  #   tech: TypeScript / Three.js
+  #   slug: math-lib
+  #   url: https://github.com/stevejtrettel/math-lib
 
-  - title: Hyperbolic Polytopes
-    description: "Convex polytopes, Coxeter groups, and tilings in hyperbolic space."
+  - title: Homogeneous Spaces
+    description: "Drawing geometrically-correct points, geodesics, curves, and surfaces in 2D and 3D homogeneous spaces — constant-curvature geometries, their Lorentzian cousins, and product spaces — through swappable coordinate models."
+    tech: TypeScript / three.js
+    slug: homogeneous-spaces
+    url: https://github.com/stevejtrettel/homogeneous-spaces
+
+  - title: Coxeter Visualizations
+    description: "A visualization library for Coxeter groups in hyperbolic 2- and 3-space: from a polytope's combinatorics it finds the canonical hyperbolic realization, then draws tilings, Cayley graphs, and chosen subgroups."
     tech: TypeScript / Three.js
-    url: https://github.com/stevejtrettel/hyperbolic-polytopes/
+    slug: coxeter-viz
+    url: https://github.com/stevejtrettel/coxeter-viz
     collaborators: [gordon-kirby]
 
   - title: Limit Sets
-    description: "Limit sets of finitely-generated groups on projective space."
+    description: "Viewers and high-resolution renderers for limit sets of matrix groups on projective space and flag varieties (Kleinian, Anosov, Hitchin, hypergeometric monodromy), scaling from a million points live to twenty billion offline."
     tech: TypeScript / Three.js
+    slug: limit-sets
     url: https://github.com/stevejtrettel/limit-sets/
 
   - title: Geometric Optimization
-    description: "Solving geometric embedding problems via optimization."
+    description: "A GPU-accelerated, differentiable mesh-physics platform that relaxes discrete surfaces under spring-mass and Coulomb energies, in any Riemannian ambient space with a computable geodesic distance."
     tech: Python, Javascript
-    url: https://github.com/MPI-MiS-Mathematics-Lab/PyTorch-DDG
+    slug: geometric-optimization
     collaborators: [mpi-math-lab]
 
 projects:
   - title: Cubic Lines
-    description: "Real-time cubic surfaces from six points in the projective plane."
+    description: "A live exploration of the moduli space of cubic surfaces with 27 real lines: six points in the plane determine the cubic and its lines, computed by projective linear algebra and drawn by GPU ray-marching."
     tech: Javascript / GLSL
+    slug: cubic-lines
     url: https://github.com/stevejtrettel/cubic-lines/
     collaborators: [gabriel-dorfsman-hopkins, claudio-gomez-gonzales]
 
   - title: Geodesic Boards
-    description: "Computing geodesics on surfaces z=f(x,y) for CNC cutting."
+    description: "A live editor for curved surfaces and their geodesics that respects a physical CNC machine's limits and exports geodesic position and normal data as toolpaths for engraving wooden models."
     tech: Javascript
+    slug: geodesic-boards
     url: https://github.com/stevejtrettel/geodesic-boards
     collaborators: [edmund-harriss]
 
-  - title: Surfaces of Revolution
-    description: "Surfaces of revolution embedded in the Thurston geometries."
-    tech: Javascript / Three.js
-    url: https://github.com/FabianLander/SurfacesOfRevolution
-    collaborators: [fabi-lander]
-
   - title: Constant Curvature Surfaces
-    description: "Constant-curvature surfaces, textured by sphere or hyperbolic plane."
+    description: "Real-time surfaces of revolution of constant Gaussian curvature and their Dini twists, with shaders drawing geodesics and metrically-correct textures directly on each surface."
+    slug: constant-curvature-surfaces
     url: https://github.com/stevejtrettel/spindle-earth
     collaborators: [stepan-paul]
 
   - title: Low-Vertex Flat Tori
-    description: "Numerically discovering low-complexity flat tori in 3-space."
+    description: "Numerical discovery of flat, embedded polyhedral tori in 3-space (Schwartz's vertex-minimal construction), using Newton solvers, homotopy continuation, and gradient descent on high-codimension varieties."
     tech: TypeScript / Three.js
+    slug: low-vertex-flat-tori
     url: https://github.com/FabianLander/low-vertex-flat-tori
     collaborators: [fabi-lander]
 
   - title: Variety Point Clouds
-    description: "Sampling algebraic varieties in projective space as point clouds."
+    description: "Samples point clouds on projective varieties of high dimension and codimension (including singularity links and Milnor fibers), projecting them into 3-space for research and illustration."
     tech: TypeScript / Three.js
+    slug: variety-point-clouds
     url: https://github.com/FabianLander/variety-point-clouds
     collaborators: [fabi-lander]
 
   - title: Knitted Surfaces
-    description: "Computing periodic knitted designs on surfaces."
+    description: "Replaces a quad- or triangle-meshed surface with a tangle of curves: strand segments in a fundamental domain, plus symmetry data, are stitched into continuous tubes and exported to render."
     tech: JavaScript
+    slug: knitted-surfaces
     url: https://github.com/stevejtrettel/knitted-surfaces
     collaborators: [mpi-math-lab]
 
-specificPrograms:
-  - type: Program
-    title: Geodesics and Spheres in Sol
-    for: Rich Schwartz
+  - title: Anosov
+    description: "Searching for and rigorously certifying Anosov representations into higher-rank Lie groups."
+    tech: TypeScript / Three.js
+    status: In development
+    collaborators: [max-riestenberg]
 
-  - type: Animation
-    title: Finding Lines on a Cubic
-    for: Benson Farb, Jesse Wolfson
-    url: https://vimeo.com/368051641
-
-  - type: Animation
-    title: Braid Monodromy
-    for: Benson Farb, Jesse Wolfson
-    url: https://vimeo.com/368067023
-
-  - type: Figures
-    title: Cubic Surfaces
-    for: Stephen McKean
-    url: https://vimeo.com/393580753
-    arxiv: https://arxiv.org/abs/2002.10367
-
-  - type: Animation
-    title: "Approaching ∂(Teichm\xFCller Space)"
-    for: Katie Mann
-    url: https://www.shadertoy.com/view/sdGGDV
-
-  - type: Program
-    title: Phase of Complex Polynomials
-    for: Jon McCammond, Michael Dougherty
+  - title: Starscapes
+    description: "Real-time rendering of algebraic-number starscapes: the complex roots of integer polynomials, shaded by arithmetic invariants, revealing patterns from Diophantine approximation and the geometry of numbers."
+    tech: TypeScript / GLSL
+    slug: starscapes
+    url: https://github.com/stevejtrettel/starscapes
+    collaborators: [edmund-harriss, kate-stange]

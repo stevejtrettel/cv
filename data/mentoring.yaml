@@ -1,7 +1,7 @@
 # Graduate student mentoring. `intro` is the lead-in sentence; `students` is the list.
 # Per student: name, institution, degree, years required; thesis optional (omit if none yet).
 
-intro: "Though USF has no graduate program in mathematics, I have mentored several graduate students---meeting weekly, suggesting projects, and revising dissertations."
+intro: "Though USF has no graduate program in mathematics, I have mentored several graduate students—meeting weekly, suggesting projects, and revising dissertations."
 
 students:
   - name: Fabian Lander
