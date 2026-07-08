@@ -183,13 +183,13 @@
 \cvsubsection{Software Systems}
 <% if intros.softwareSystems %>\cvintro{<< intros.softwareSystems >>}<% endif %>
 <% for e in software.systems %>
-\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{See Code on GitHub}.<% endif %>\newline {\detailfont\small << e.description >><%- if e.detail %> << e.detail >><% endif %>}}
+\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.slug %> \href{https://stevejtrettel.site/software/<< e.slug >>/}{info \& code}.<%- elif e.status %> \textit{<< e.status >>}.<% endif %>\newline {\detailfont\small << e.description >><%- if e.detail %> << e.detail >><% endif %>}}
 <% endfor %>
 
 \cvsubsection{Research Projects}
 <% if intros.researchProjects %>\cvintro{<< intros.researchProjects >>}<% endif %>
 <% for e in software.projects %>
-\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.url %> \href{<< e.url >>}{See Code on GitHub}.<% endif %>\newline {\detailfont\small << e.description >><%- if e.detail %> << e.detail >><% endif %>}}
+\cvitem{}{\textbf{<< e.title >>}<%- if e.collaborators %>, with << e.collaborators | join(", ") >><% endif %>.<%- if e.slug %> \href{https://stevejtrettel.site/software/<< e.slug >>/}{info \& code}.<%- elif e.status %> \textit{<< e.status >>}.<% endif %>\newline {\detailfont\small << e.description >><%- if e.detail %> << e.detail >><% endif %>}}
 <% endfor %>
 
 <# Specific Programs section hidden — data retained in software.yaml, not displayed #>
